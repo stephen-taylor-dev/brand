@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>taylorsmart.ai — Shield Finalists</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --p950:#0B1121;--p900:#19214E;--p800:#263261;--p700:#2D3B6B;
+      --a500:#00D4FF;--a600:#00AADF;--a700:#0080B0;
+      --h500:#FFC107;
+      --n50:#F8F9FB;--n100:#F1F3F7;--n200:#E2E5ED;--n300:#CDD2DE;--n400:#9BA3B8;
+      --n500:#6B7492;--n600:#515A74;--n700:#3C4459;--n800:#282E3F;--n900:#181C28;--n950:#0D0F16;
+      --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      --mono:'JetBrains Mono',monospace;
+    }
+    body{font-family:var(--sans);background:var(--n950);color:var(--n100);-webkit-font-smoothing:antialiased}
+
+    .header{padding:72px 60px 48px;background:linear-gradient(135deg,var(--p950),var(--p900));position:relative;overflow:hidden}
+    .header::before{content:'';position:absolute;top:-40%;right:-15%;width:500px;height:500px;background:radial-gradient(circle,rgba(0,212,255,.06) 0%,transparent 70%);border-radius:50%}
+    .header .label{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--a500);margin-bottom:10px;position:relative}
+    .header h1{font-size:44px;font-weight:800;color:#fff;letter-spacing:-2px;line-height:1.1;position:relative}
+    .header p{margin-top:12px;font-size:17px;color:var(--n400);max-width:560px;position:relative;line-height:1.6}
+
+    /* Finalist section */
+    .finalist{padding:60px;border-bottom:1px solid var(--n800)}
+    .finalist-header{display:flex;align-items:baseline;gap:16px;margin-bottom:40px}
+    .finalist-num{font-family:var(--mono);font-size:12px;color:var(--a500);opacity:.6}
+    .finalist-name{font-size:32px;font-weight:800;color:#fff;letter-spacing:-1px}
+    .finalist-sub{font-size:15px;color:var(--a600);margin-left:8px}
+
+    .finalist-showcase{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px}
+
+    .showcase-card{border-radius:20px;padding:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:320px}
+    .showcase-card.dark{background:var(--p950);border:1px solid var(--p700)}
+    .showcase-card.light{background:#fff;border:1px solid var(--n200)}
+    .showcase-card .card-label{position:absolute;bottom:14px;left:18px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;opacity:.4}
+    .showcase-card.dark .card-label{color:#fff}
+    .showcase-card.light .card-label{color:var(--n600)}
+
+    .lockup-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:32px}
+    .lockup-card{border-radius:16px;padding:28px 24px;display:flex;align-items:center;gap:16px}
+    .lockup-card.dark{background:var(--p950);border:1px solid var(--p700)}
+    .lockup-card.light{background:#fff;border:1px solid var(--n200)}
+    .lockup-card.gradient{background:linear-gradient(135deg,var(--p950),var(--p800));border:1px solid var(--p700)}
+    .lockup-wm{font-size:26px;letter-spacing:-1.2px;white-space:nowrap}
+    .lockup-wm .b{font-weight:800}
+    .lockup-wm .l{font-weight:300}
+    .lockup-wm .c{font-weight:700;color:var(--a500)}
+    .lockup-card.dark .b,.lockup-card.gradient .b{color:#fff}
+    .lockup-card.dark .l,.lockup-card.gradient .l{color:rgba(255,255,255,.55)}
+    .lockup-card.light .b{color:var(--p950)}
+    .lockup-card.light .l{color:var(--n600)}
+    .lockup-card.light .c{color:var(--a600)}
+
+    .sizes-row{display:flex;align-items:flex-end;gap:40px;margin-bottom:24px}
+    .size-item{text-align:center}
+    .size-label{font-family:var(--mono);font-size:11px;color:var(--n500);margin-top:8px}
+
+    .notes{font-size:14px;color:var(--n400);line-height:1.7;max-width:640px}
+    .notes strong{color:var(--n200)}
+
+    .footer{padding:48px 60px;text-align:center;border-top:1px solid var(--n800)}
+    .footer .domain{font-size:18px;font-weight:700;color:var(--a500);font-family:var(--mono);margin-bottom:6px}
+    .footer p{font-size:13px;color:var(--n500)}
+
+    @media(max-width:768px){.finalist{padding:40px 24px}.finalist-showcase{grid-template-columns:1fr}.lockup-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="label">Finalists — Refined</div>
+  <h1>Shield + TS Monogram</h1>
+  <p>Three shield concepts developed further — shown on dark and light backgrounds, in full lockup with the wordmark, and at multiple sizes.</p>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- SH-1: THE CREST — Shared stem -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<section class="finalist">
+  <div class="finalist-header">
+    <span class="finalist-num">SH-1</span>
+    <h2 class="finalist-name">The Crest</h2>
+    <span class="finalist-sub">Shared stem — T and S are one structure</span>
+  </div>
+
+  <div class="finalist-showcase">
+    <!-- Dark -->
+    <div class="showcase-card dark">
+      <svg viewBox="0 0 512 512" width="240" height="240">
+        <defs>
+          <linearGradient id="f1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <linearGradient id="f1fill" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.01"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- Shield -->
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f1fill)"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="none" stroke="white" stroke-width="6" opacity="0.1"/>
+
+        <!-- T crossbar -->
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <!-- Shared stem -->
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+
+        <!-- S geometric bars (cyan) -->
+        <!-- S top-left vertical -->
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="url(#f1g)"/>
+        <!-- S middle-left bar -->
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="url(#f1g)"/>
+        <!-- S bottom-right vertical -->
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="url(#f1g)"/>
+        <!-- S bottom bar -->
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="url(#f1g)"/>
+        <!-- S top bar (sits just under T crossbar) -->
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="url(#f1g)"/>
+      </svg>
+      <span class="card-label">Dark background</span>
+    </div>
+    <!-- Light -->
+    <div class="showcase-card light">
+      <svg viewBox="0 0 512 512" width="240" height="240">
+        <defs>
+          <linearGradient id="f1gL" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#F8F9FB"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="#0B1121" opacity="0.03"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="none" stroke="#0B1121" stroke-width="6" opacity="0.08"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="#0B1121"/>
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="url(#f1gL)"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="url(#f1gL)"/>
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="url(#f1gL)"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="url(#f1gL)"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="url(#f1gL)"/>
+      </svg>
+      <span class="card-label">Light background</span>
+    </div>
+  </div>
+
+  <!-- Lockups -->
+  <div class="lockup-row">
+    <div class="lockup-card gradient">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="white" opacity="0.05"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="#00D4FF"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="#00D4FF"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="lockup-card light">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="white" opacity="0.05"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="#00D4FF"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="#00D4FF"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="lockup-card dark">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="#00D4FF"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="#00D4FF"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="sizes-row">
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="16" height="16">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="#00D4FF"/>
+      </svg>
+      <div class="size-label">16px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="#00D4FF"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="#00D4FF"/>
+      </svg>
+      <div class="size-label">32px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="64" height="64">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="white" opacity="0.05"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="#00D4FF"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="#00D4FF"/>
+      </svg>
+      <div class="size-label">64px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="128" height="128">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="white" opacity="0.05"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="none" stroke="white" stroke-width="6" opacity="0.1"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="white"/>
+        <rect x="239" y="144" width="34" height="248" rx="5" fill="white"/>
+        <rect x="164" y="186" width="30" height="74" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="230" width="110" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="318" y="260" width="30" height="80" rx="4" fill="#00D4FF"/>
+        <rect x="239" y="310" width="109" height="30" rx="4" fill="#00D4FF"/>
+        <rect x="164" y="186" width="110" height="30" rx="4" fill="#00D4FF"/>
+      </svg>
+      <div class="size-label">128px</div>
+    </div>
+  </div>
+
+  <p class="notes"><strong>The Crest</strong> — The T's vertical stem is the S's backbone. The S bars extend left and right from the shared spine in cyan. Reads as "TS" clearly because the T crossbar anchors the eye at the top. The shield outline frames the monogram without competing. Most structured and architectural of the three.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- SH-4: THE SENTINEL — Negative space -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<section class="finalist">
+  <div class="finalist-header">
+    <span class="finalist-num">SH-4</span>
+    <h2 class="finalist-name">The Sentinel</h2>
+    <span class="finalist-sub">Negative space — TS carved from a solid shield</span>
+  </div>
+
+  <div class="finalist-showcase">
+    <div class="showcase-card dark">
+      <svg viewBox="0 0 512 512" width="240" height="240">
+        <defs>
+          <linearGradient id="f4g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+        <!-- Solid filled shield -->
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4g)"/>
+
+        <!-- Cut out the T (dark rectangles on top of the cyan) -->
+        <!-- T crossbar -->
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <!-- T stem -->
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#0B1121"/>
+
+        <!-- Cut out the geometric S -->
+        <!-- S top bar -->
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#0B1121"/>
+        <!-- S top-left vertical -->
+        <rect x="168" y="190" width="28" height="68" rx="4" fill="#0B1121"/>
+        <!-- S middle bar -->
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#0B1121"/>
+        <!-- S bottom-right vertical -->
+        <rect x="316" y="266" width="28" height="68" rx="4" fill="#0B1121"/>
+        <!-- S bottom bar -->
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#0B1121"/>
+        <!-- S middle right extension -->
+        <rect x="240" y="266" width="104" height="28" rx="4" fill="#0B1121"/>
+
+        <!-- Thin highlight edge -->
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="none" stroke="white" stroke-width="2" opacity="0.15"/>
+      </svg>
+      <span class="card-label">Dark background</span>
+    </div>
+    <div class="showcase-card light">
+      <svg viewBox="0 0 512 512" width="240" height="240">
+        <defs>
+          <linearGradient id="f4gL" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#F8F9FB"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4gL)"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#F8F9FB"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#F8F9FB"/>
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#F8F9FB"/>
+        <rect x="168" y="190" width="28" height="68" rx="4" fill="#F8F9FB"/>
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#F8F9FB"/>
+        <rect x="316" y="266" width="28" height="68" rx="4" fill="#F8F9FB"/>
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#F8F9FB"/>
+        <rect x="240" y="266" width="104" height="28" rx="4" fill="#F8F9FB"/>
+      </svg>
+      <span class="card-label">Light background</span>
+    </div>
+  </div>
+
+  <div class="lockup-row">
+    <div class="lockup-card gradient">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <defs><linearGradient id="f4s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4s)"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#0B1121"/>
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="168" y="190" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="316" y="266" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#0B1121"/>
+        <rect x="240" y="266" width="104" height="28" rx="4" fill="#0B1121"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="lockup-card light">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <defs><linearGradient id="f4s2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#F8F9FB"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4s2)"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#F8F9FB"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#F8F9FB"/>
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#F8F9FB"/>
+        <rect x="168" y="190" width="28" height="68" rx="4" fill="#F8F9FB"/>
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#F8F9FB"/>
+        <rect x="316" y="266" width="28" height="68" rx="4" fill="#F8F9FB"/>
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#F8F9FB"/>
+        <rect x="240" y="266" width="104" height="28" rx="4" fill="#F8F9FB"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="lockup-card dark">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <defs><linearGradient id="f4s3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4s3)"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#0B1121"/>
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="168" y="190" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="316" y="266" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#0B1121"/>
+        <rect x="240" y="266" width="104" height="28" rx="4" fill="#0B1121"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+  </div>
+
+  <div class="sizes-row">
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="16" height="16">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="#00D4FF"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#0B1121"/>
+      </svg>
+      <div class="size-label">16px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <defs><linearGradient id="f4t" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4t)"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#0B1121"/>
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#0B1121"/>
+      </svg>
+      <div class="size-label">32px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="64" height="64">
+        <defs><linearGradient id="f4u" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4u)"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#0B1121"/>
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="168" y="190" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="316" y="266" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#0B1121"/>
+        <rect x="240" y="266" width="104" height="28" rx="4" fill="#0B1121"/>
+      </svg>
+      <div class="size-label">64px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="128" height="128">
+        <defs><linearGradient id="f4v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="url(#f4v)"/>
+        <path d="M256 72 L412 130 L412 290 Q412 400 256 438 Q100 400 100 290 L100 130 Z" fill="none" stroke="white" stroke-width="2" opacity="0.12"/>
+        <rect x="148" y="144" width="216" height="34" rx="5" fill="#0B1121"/>
+        <rect x="239" y="144" width="34" height="252" rx="5" fill="#0B1121"/>
+        <rect x="168" y="190" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="168" y="190" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="168" y="238" width="108" height="28" rx="4" fill="#0B1121"/>
+        <rect x="316" y="266" width="28" height="68" rx="4" fill="#0B1121"/>
+        <rect x="240" y="318" width="104" height="28" rx="4" fill="#0B1121"/>
+        <rect x="240" y="266" width="104" height="28" rx="4" fill="#0B1121"/>
+      </svg>
+      <div class="size-label">128px</div>
+    </div>
+  </div>
+
+  <p class="notes"><strong>The Sentinel</strong> — A solid cyan shield with the TS punched out as negative space. The shield shape itself IS the logo — instantly recognizable as a single bold mark. At 16px it simplifies to just the T cutout (the crossbar and stem are the most readable elements). The most impactful and icon-like of the three. Highest contrast, strongest presence.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- SH-6: THE BASTION — Split shield, big TS -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<section class="finalist">
+  <div class="finalist-header">
+    <span class="finalist-num">SH-6</span>
+    <h2 class="finalist-name">The Bastion</h2>
+    <span class="finalist-sub">Split shield — massive T and S, side by side</span>
+  </div>
+
+  <div class="finalist-showcase">
+    <div class="showcase-card dark">
+      <svg viewBox="0 0 512 512" width="240" height="240">
+        <defs>
+          <linearGradient id="f6bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#263261"/><stop offset="100%" stop-color="#0B1121"/></linearGradient>
+          <linearGradient id="f6a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- Filled shield -->
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="url(#f6bg)"/>
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="none" stroke="white" stroke-width="3" opacity="0.1"/>
+        <!-- Top accent band -->
+        <path d="M256 72 L416 132 L416 148 L256 88 L96 148 L96 132 Z" fill="white" opacity="0.03"/>
+
+        <!-- T — bold geometric -->
+        <rect x="120" y="144" width="180" height="38" rx="5" fill="white"/>
+        <rect x="192" y="144" width="38" height="236" rx="5" fill="white"/>
+
+        <!-- S — bold geometric, cyan -->
+        <!-- Top bar -->
+        <rect x="244" y="144" width="144" height="34" rx="5" fill="url(#f6a)"/>
+        <!-- Top-left drop -->
+        <rect x="244" y="144" width="34" height="90" rx="5" fill="url(#f6a)"/>
+        <!-- Middle bar -->
+        <rect x="244" y="234" width="144" height="34" rx="5" fill="url(#f6a)"/>
+        <!-- Bottom-right drop -->
+        <rect x="354" y="234" width="34" height="90" rx="5" fill="url(#f6a)"/>
+        <!-- Bottom bar -->
+        <rect x="244" y="324" width="144" height="34" rx="5" fill="url(#f6a)"/>
+      </svg>
+      <span class="card-label">Dark background</span>
+    </div>
+    <div class="showcase-card light">
+      <svg viewBox="0 0 512 512" width="240" height="240">
+        <defs>
+          <linearGradient id="f6bgL" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#E2E5ED"/><stop offset="100%" stop-color="#F1F3F7"/></linearGradient>
+          <linearGradient id="f6aL" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#F8F9FB"/>
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="url(#f6bgL)"/>
+        <rect x="120" y="144" width="180" height="38" rx="5" fill="#0B1121"/>
+        <rect x="192" y="144" width="38" height="236" rx="5" fill="#0B1121"/>
+        <rect x="244" y="144" width="144" height="34" rx="5" fill="url(#f6aL)"/>
+        <rect x="244" y="144" width="34" height="90" rx="5" fill="url(#f6aL)"/>
+        <rect x="244" y="234" width="144" height="34" rx="5" fill="url(#f6aL)"/>
+        <rect x="354" y="234" width="34" height="90" rx="5" fill="url(#f6aL)"/>
+        <rect x="244" y="324" width="144" height="34" rx="5" fill="url(#f6aL)"/>
+      </svg>
+      <span class="card-label">Light background</span>
+    </div>
+  </div>
+
+  <div class="lockup-row">
+    <div class="lockup-card gradient">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <defs><linearGradient id="f6m1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#263261"/><stop offset="100%" stop-color="#0B1121"/></linearGradient><linearGradient id="f6m1a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="url(#f6m1)"/>
+        <rect x="120" y="144" width="180" height="38" rx="5" fill="white"/>
+        <rect x="192" y="144" width="38" height="236" rx="5" fill="white"/>
+        <rect x="244" y="144" width="144" height="34" rx="5" fill="url(#f6m1a)"/>
+        <rect x="244" y="144" width="34" height="90" rx="5" fill="url(#f6m1a)"/>
+        <rect x="244" y="234" width="144" height="34" rx="5" fill="url(#f6m1a)"/>
+        <rect x="354" y="234" width="34" height="90" rx="5" fill="url(#f6m1a)"/>
+        <rect x="244" y="324" width="144" height="34" rx="5" fill="url(#f6m1a)"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="lockup-card light">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <defs><linearGradient id="f6m2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#E2E5ED"/><stop offset="100%" stop-color="#F1F3F7"/></linearGradient><linearGradient id="f6m2a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#F8F9FB"/>
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="url(#f6m2)"/>
+        <rect x="120" y="144" width="180" height="38" rx="5" fill="#0B1121"/>
+        <rect x="192" y="144" width="38" height="236" rx="5" fill="#0B1121"/>
+        <rect x="244" y="144" width="144" height="34" rx="5" fill="url(#f6m2a)"/>
+        <rect x="244" y="144" width="34" height="90" rx="5" fill="url(#f6m2a)"/>
+        <rect x="244" y="234" width="144" height="34" rx="5" fill="url(#f6m2a)"/>
+        <rect x="354" y="234" width="34" height="90" rx="5" fill="url(#f6m2a)"/>
+        <rect x="244" y="324" width="144" height="34" rx="5" fill="url(#f6m2a)"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="lockup-card dark">
+      <svg viewBox="0 0 512 512" width="44" height="44">
+        <defs><linearGradient id="f6m3" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#263261"/><stop offset="100%" stop-color="#0B1121"/></linearGradient><linearGradient id="f6m3a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="url(#f6m3)"/>
+        <rect x="120" y="144" width="180" height="38" rx="5" fill="white"/>
+        <rect x="192" y="144" width="38" height="236" rx="5" fill="white"/>
+        <rect x="244" y="144" width="144" height="34" rx="5" fill="url(#f6m3a)"/>
+        <rect x="244" y="144" width="34" height="90" rx="5" fill="url(#f6m3a)"/>
+        <rect x="244" y="234" width="144" height="34" rx="5" fill="url(#f6m3a)"/>
+        <rect x="354" y="234" width="34" height="90" rx="5" fill="url(#f6m3a)"/>
+        <rect x="244" y="324" width="144" height="34" rx="5" fill="url(#f6m3a)"/>
+      </svg>
+      <div class="lockup-wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+  </div>
+
+  <div class="sizes-row">
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="16" height="16">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="#19214E"/>
+        <rect x="120" y="144" width="180" height="38" rx="5" fill="white"/>
+        <rect x="192" y="144" width="38" height="236" rx="5" fill="white"/>
+        <rect x="244" y="144" width="144" height="34" rx="5" fill="#00D4FF"/>
+        <rect x="244" y="234" width="144" height="34" rx="5" fill="#00D4FF"/>
+        <rect x="244" y="324" width="144" height="34" rx="5" fill="#00D4FF"/>
+      </svg>
+      <div class="size-label">16px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <defs><linearGradient id="f6t" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#263261"/><stop offset="100%" stop-color="#0B1121"/></linearGradient></defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="url(#f6t)"/>
+        <rect x="120" y="144" width="180" height="38" rx="5" fill="white"/>
+        <rect x="192" y="144" width="38" height="236" rx="5" fill="white"/>
+        <rect x="244" y="144" width="144" height="34" rx="5" fill="#00D4FF"/>
+        <rect x="244" y="144" width="34" height="90" rx="5" fill="#00D4FF"/>
+        <rect x="244" y="234" width="144" height="34" rx="5" fill="#00D4FF"/>
+        <rect x="354" y="234" width="34" height="90" rx="5" fill="#00D4FF"/>
+        <rect x="244" y="324" width="144" height="34" rx="5" fill="#00D4FF"/>
+      </svg>
+      <div class="size-label">32px</div>
+    </div>
+    <div class="size-item">
+      <svg viewBox="0 0 512 512" width="64" height="64">
+        <defs><linearGradient id="f6u" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#263261"/><stop offset="100%" stop-color="#0B1121"/></linearGradient><linearGradient id="f6ua" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGrad

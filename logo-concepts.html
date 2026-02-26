@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>taylorsmart.ai — Logo Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary-950: #0B1121;
+      --primary-900: #19214E;
+      --primary-800: #263261;
+      --primary-700: #2D3B6B;
+      --accent-500: #00D4FF;
+      --accent-600: #00AADF;
+      --accent-700: #0080B0;
+      --highlight-500: #FFC107;
+      --neutral-50: #F8F9FB;
+      --neutral-100: #F1F3F7;
+      --neutral-200: #E2E5ED;
+      --neutral-300: #CDD2DE;
+      --neutral-400: #9BA3B8;
+      --neutral-500: #6B7492;
+      --neutral-600: #515A74;
+      --neutral-700: #3C4459;
+      --neutral-800: #282E3F;
+      --neutral-900: #181C28;
+      --neutral-950: #0D0F16;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--neutral-950);
+      color: var(--neutral-100);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    .header {
+      padding: 80px 60px 60px;
+      background: linear-gradient(135deg, var(--primary-950), var(--primary-900));
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .header .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent-500);
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .header h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      position: relative;
+    }
+    .header p {
+      margin-top: 16px;
+      font-size: 18px;
+      color: var(--neutral-400);
+      max-width: 600px;
+      position: relative;
+    }
+
+    /* Concept cards */
+    .concepts {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+    .concept {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .concept-icon-area {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .concept-icon-card {
+      background: var(--primary-950);
+      border: 1px solid var(--primary-700);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+    }
+    .concept-icon-card.light-bg {
+      background: white;
+      border-color: var(--neutral-200);
+    }
+    .concept-lockup {
+      background: var(--neutral-900);
+      border: 1px solid var(--neutral-800);
+      border-radius: 14px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .concept-wordmark {
+      font-size: 28px;
+      letter-spacing: -1.2px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .concept-wordmark .b { font-weight: 800; color: white; }
+    .concept-wordmark .l { font-weight: 300; color: rgba(255,255,255,0.6); }
+    .concept-wordmark .c { font-weight: 700; color: var(--accent-500); }
+
+    .concept-info { padding-top: 8px; }
+    .concept-number {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-500);
+      margin-bottom: 8px;
+      opacity: 0.7;
+    }
+    .concept-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -1px;
+      margin-bottom: 4px;
+    }
+    .concept-subtitle {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--accent-600);
+      margin-bottom: 20px;
+    }
+    .concept-desc {
+      font-size: 15px;
+      color: var(--neutral-300);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 520px;
+    }
+    .concept-traits {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .trait {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(0,212,255,0.08);
+      color: var(--accent-500);
+      border: 1px solid rgba(0,212,255,0.15);
+    }
+    .trait.gold {
+      background: rgba(255,193,7,0.08);
+      color: var(--highlight-500);
+      border-color: rgba(255,193,7,0.15);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--neutral-800);
+      margin: 0 60px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 60px;
+      text-align: center;
+    }
+    .footer p {
+      font-size: 14px;
+      color: var(--neutral-500);
+    }
+
+    @media (max-width: 768px) {
+      .header, .concepts { padding: 40px 24px; }
+      .concept { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="label">Logo Exploration</div>
+    <h1>Intelligence &<br>Clever Solutions</h1>
+    <p>Six logo concepts for taylorsmart.ai — each exploring a different metaphor for intelligence, strategy, and smart problem-solving.</p>
+  </header>
+
+  <div class="concepts">
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT A — THE SAGE (Owl) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="owlCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Subtle circuit traces -->
+            <line x1="72" y1="176" x2="132" y2="176" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="380" y1="176" x2="440" y2="176" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="72" cy="176" r="3" fill="#19214E"/>
+            <circle cx="440" cy="176" r="3" fill="#19214E"/>
+
+            <!-- Ear tufts -->
+            <polygon points="148,210 192,108 236,195" fill="white"/>
+            <polygon points="276,195 320,108 364,210" fill="white"/>
+
+            <!-- Head shape: rounded wide area connecting the ears to the body -->
+            <ellipse cx="256" cy="300" rx="140" ry="120" fill="white"/>
+
+            <!-- Eye sockets (dark cutouts) -->
+            <circle cx="200" cy="272" r="62" fill="#0B1121"/>
+            <circle cx="312" cy="272" r="62" fill="#0B1121"/>
+
+            <!-- Irises -->
+            <circle cx="200" cy="272" r="46" fill="white"/>
+            <circle cx="312" cy="272" r="46" fill="white"/>
+
+            <!-- Pupils -->
+            <circle cx="210" cy="272" r="22" fill="url(#owlCyan)"/>
+            <circle cx="322" cy="272" r="22" fill="url(#owlCyan)"/>
+
+            <!-- Pupil highlights -->
+            <circle cx="200" cy="264" r="8" fill="white" opacity="0.6"/>
+            <circle cx="312" cy="264" r="8" fill="white" opacity="0.6"/>
+
+            <!-- Beak -->
+            <polygon points="240,316 256,352 272,316" fill="#0B1121"/>
+
+            <!-- Subtle brow ridge -->
+            <path d="M138 230 Q168 210 200 218" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M374 230 Q344 210 312 218" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <polygon points="148,210 192,108 236,195" fill="white"/>
+            <polygon points="276,195 320,108 364,210" fill="white"/>
+            <ellipse cx="256" cy="300" rx="140" ry="120" fill="white"/>
+            <circle cx="200" cy="272" r="62" fill="#0B1121"/>
+            <circle cx="312" cy="272" r="62" fill="#0B1121"/>
+            <circle cx="200" cy="272" r="46" fill="white"/>
+            <circle cx="312" cy="272" r="46" fill="white"/>
+            <circle cx="210" cy="272" r="22" fill="#00D4FF"/>
+            <circle cx="322" cy="272" r="22" fill="#00D4FF"/>
+            <circle cx="200" cy="264" r="8" fill="white" opacity="0.6"/>
+            <circle cx="312" cy="264" r="8" fill="white" opacity="0.6"/>
+            <polygon points="240,316 256,352 272,316" fill="#0B1121"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT A</div>
+        <h2 class="concept-name">The Sage</h2>
+        <div class="concept-subtitle">Owl — Wisdom that sees what others can't</div>
+        <p class="concept-desc">
+          The owl is the universal symbol of wisdom and intelligence. This geometric owl face is bold and immediately recognizable — the large cyan eyes suggest AI-powered vision, always watching, always processing. The angular ear tufts give it a sharp, alert quality. Owls see in the dark — taylorsmart.ai sees solutions where others see only problems.
+        </p>
+        <p class="concept-desc">
+          Strong mascot potential. Works as a favicon (the eyes are distinctive even at 16px). Has personality and warmth while still feeling technical.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Wisdom</span>
+          <span class="trait">Vision</span>
+          <span class="trait">Alertness</span>
+          <span class="trait gold">Memorable</span>
+          <span class="trait gold">Mascot Potential</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT B — THE CLEVER (Fox) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="foxCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Subtle circuit traces -->
+            <line x1="256" y1="72" x2="256" y2="112" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="256" cy="72" r="3" fill="#19214E"/>
+
+            <!-- Outer ears -->
+            <polygon points="130,300 180,88 248,220" fill="white"/>
+            <polygon points="382,300 332,88 264,220" fill="white"/>
+
+            <!-- Inner ear marks (cyan) -->
+            <polygon points="160,272 190,132 236,224" fill="url(#foxCyan)"/>
+            <polygon points="352,272 322,132 276,224" fill="url(#foxCyan)"/>
+
+            <!-- Face -->
+            <polygon points="130,300 256,432 382,300 320,230 256,210 192,230" fill="white"/>
+
+            <!-- Eye masks (dark angular shapes) -->
+            <polygon points="170,272 210,252 230,280 200,310" fill="#0B1121"/>
+            <polygon points="342,272 302,252 282,280 312,310" fill="#0B1121"/>
+
+            <!-- Eyes -->
+            <circle cx="202" cy="278" r="10" fill="#00D4FF"/>
+            <circle cx="310" cy="278" r="10" fill="#00D4FF"/>
+            <circle cx="199" cy="275" r="4" fill="white" opacity="0.5"/>
+            <circle cx="307" cy="275" r="4" fill="white" opacity="0.5"/>
+
+            <!-- Nose -->
+            <circle cx="256" cy="380" r="14" fill="#0B1121"/>
+            <circle cx="256" cy="378" r="5" fill="var(--accent-500)" opacity="0.3"/>
+
+            <!-- Snout line -->
+            <line x1="256" y1="394" x2="256" y2="416" stroke="#0B1121" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <polygon points="130,300 180,88 248,220" fill="white"/>
+            <polygon points="382,300 332,88 264,220" fill="white"/>
+            <polygon points="160,272 190,132 236,224" fill="#00D4FF"/>
+            <polygon points="352,272 322,132 276,224" fill="#00D4FF"/>
+            <polygon points="130,300 256,432 382,300 320,230 256,210 192,230" fill="white"/>
+            <polygon points="170,272 210,252 230,280 200,310" fill="#0B1121"/>
+            <polygon points="342,272 302,252 282,280 312,310" fill="#0B1121"/>
+            <circle cx="202" cy="278" r="10" fill="#00D4FF"/>
+            <circle cx="310" cy="278" r="10" fill="#00D4FF"/>
+            <circle cx="256" cy="380" r="14" fill="#0B1121"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT B</div>
+        <h2 class="concept-name">The Clever</h2>
+        <div class="concept-subtitle">Fox — Agile, cunning, always one step ahead</div>
+        <p class="concept-desc">
+          The fox is the embodiment of cleverness — quick thinking, resourceful, elegant in its approach. This geometric fox face uses sharp angular shapes with cyan inner ears, creating a striking, modern mark. The dark "eye mask" markings give it a distinctive, almost superhero-like quality.
+        </p>
+        <p class="concept-desc">
+          Foxes represent finding the smartest path, not the obvious one — perfect for a company that solves complicated business problems with technology. Strong visual identity with great mascot and merchandise potential.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Cleverness</span>
+          <span class="trait">Agility</span>
+          <span class="trait">Resourcefulness</span>
+          <span class="trait gold">Distinctive</span>
+          <span class="trait gold">Character</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT C — THE NAVIGATOR (Maze) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="mazeCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+              <filter id="mazeGlow">
+                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Maze walls — 4x4 grid with strategic openings -->
+            <!-- Grid starts at (96, 96) and ends at (416, 416), cell size = 80px -->
+            <g stroke="white" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.2">
+              <!-- Outer border (with entry top-left and exit bottom-right) -->
+              <path d="M136 96 L416 96 L416 416 L376 416"/>
+              <path d="M96 136 L96 416 L336 416"/>
+              <!-- Internal walls -->
+              <!-- Row 1 -->
+              <line x1="176" y1="96" x2="176" y2="176"/>
+              <line x1="256" y1="96" x2="256" y2="176"/>
+              <line x1="336" y1="176" x2="416" y2="176"/>
+              <!-- Row 2 -->
+              <line x1="96" y1="176" x2="176" y2="176"/>
+              <line x1="176" y1="176" x2="176" y2="256"/>
+              <line x1="256" y1="176" x2="336" y2="176"/>
+              <line x1="336" y1="176" x2="336" y2="256"/>
+              <!-- Row 3 -->
+              <line x1="96" y1="256" x2="176" y2="256"/>
+              <line x1="256" y1="256" x2="256" y2="336"/>
+              <line x1="336" y1="256" x2="416" y2="256"/>
+              <!-- Row 4 -->
+              <line x1="176" y1="336" x2="256" y2="336"/>
+              <line x1="336" y1="336" x2="336" y2="416"/>
+              <line x1="176" y1="336" x2="176" y2="416"/>
+            </g>
+
+            <!-- Solution path (cyan) -->
+            <g filter="url(#mazeGlow)">
+              <path d="M96 96 L96 96 L136 96"
+                    stroke="#00D4FF" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.4"/>
+              <path d="M96 96
+                       L96 96
+                       L136 136
+                       L136 256
+                       L216 256
+                       L216 176
+                       L296 176
+                       L296 296
+                       L216 296
+                       L216 376
+                       L296 376
+                       L376 376
+                       L376 416"
+                    stroke="url(#mazeCyan)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+
+            <!-- Entry node -->
+            <circle cx="136" cy="96" r="10" fill="#00D4FF"/>
+            <circle cx="136" cy="96" r="16" fill="#00D4FF" opacity="0.2"/>
+
+            <!-- Exit node -->
+            <circle cx="376" cy="416" r="10" fill="#00D4FF"/>
+            <circle cx="376" cy="416" r="16" fill="#00D4FF" opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <g stroke="white" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.2">
+              <path d="M136 96 L416 96 L416 416 L376 416"/>
+              <path d="M96 136 L96 416 L336 416"/>
+              <line x1="176" y1="96" x2="176" y2="176"/>
+              <line x1="256" y1="96" x2="256" y2="176"/>
+              <line x1="336" y1="176" x2="416" y2="176"/>
+              <line x1="96" y1="176" x2="176" y2="176"/>
+              <line x1="176" y1="176" x2="176" y2="256"/>
+              <line x1="256" y1="176" x2="336" y2="176"/>
+              <line x1="336" y1="176" x2="336" y2="256"/>
+              <line x1="96" y1="256" x2="176" y2="256"/>
+              <line x1="256" y1="256" x2="256" y2="336"/>
+              <line x1="336" y1="256" x2="416" y2="256"/>
+              <line x1="176" y1="336" x2="256" y2="336"/>
+              <line x1="336" y1="336" x2="336" y2="416"/>
+              <line x1="176" y1="336" x2="176" y2="416"/>
+            </g>
+            <path d="M136 136 L136 256 L216 256 L216 176 L296 176 L296 296 L216 296 L216 376 L296 376 L376 376 L376 416" stroke="#00D4FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="136" cy="96" r="10" fill="#00D4FF"/>
+            <circle cx="376" cy="416" r="10" fill="#00D4FF"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT C</div>
+        <h2 class="concept-name">The Navigator</h2>
+        <div class="concept-subtitle">Maze — Finding the smartest path through complexity</div>
+        <p class="concept-desc">
+          A geometric maze with the solution path illuminated in cyan. The maze walls are subtle and faded while the solution path glows with confidence — representing how taylorsmart.ai navigates complex business challenges to find elegant solutions. Entry and exit nodes glow at each end of the journey.
+        </p>
+        <p class="concept-desc">
+          This concept directly visualizes the core value proposition: you have a complicated problem, we find the smart path through it. The maze could be animated on the website — the path "solving" itself as the page loads.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Problem-Solving</span>
+          <span class="trait">Clarity</span>
+          <span class="trait">Navigation</span>
+          <span class="trait gold">Animatable</span>
+          <span class="trait gold">Metaphor-Rich</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT D — THE STRATEGIST (Chess Knight) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="knightCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Circuit traces -->
+            <line x1="72" y1="400" x2="440" y2="400" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="72" cy="400" r="3" fill="#19214E"/>
+            <circle cx="440" cy="400" r="3" fill="#19214E"/>
+
+            <!-- Knight silhouette — geometric/angular horse head facing right -->
+            <path d="
+              M 160 400
+              L 160 320
+              L 140 280
+              L 140 220
+              L 155 180
+              L 170 155
+              L 185 120
+              L 210 95
+              L 245 82
+              L 270 85
+              L 290 100
+              L 300 120
+              L 295 145
+              L 310 140
+              L 340 130
+              L 365 140
+              L 380 165
+              L 375 200
+              L 355 230
+              L 330 260
+              L 355 265
+              L 370 280
+              L 370 320
+              L 360 400
+              Z
+            " fill="white"/>
+
+            <!-- Eye -->
+            <circle cx="270" cy="150" r="14" fill="#0B1121"/>
+            <circle cx="270" cy="150" r="8" fill="url(#knightCyan)"/>
+            <circle cx="267" cy="147" r="3" fill="white" opacity="0.5"/>
+
+            <!-- Nostril -->
+            <circle cx="365" cy="195" r="8" fill="#0B1121" opacity="0.5"/>
+
+            <!-- Mane detail lines -->
+            <line x1="200" y1="110" x2="220" y2="170" stroke="#0B1121" stroke-width="3" opacity="0.15" stroke-linecap="round"/>
+            <line x1="215" y1="100" x2="230" y2="155" stroke="#0B1121" stroke-width="3" opacity="0.15" stroke-linecap="round"/>
+
+            <!-- Base platform -->
+            <rect x="140" y="400" width="240" height="20" rx="4" fill="white" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M160 400 L160 320 L140 280 L140 220 L155 180 L170 155 L185 120 L210 95 L245 82 L270 85 L290 100 L300 120 L295 145 L310 140 L340 130 L365 140 L380 165 L375 200 L355 230 L330 260 L355 265 L370 280 L370 320 L360 400 Z" fill="white"/>
+            <circle cx="270" cy="150" r="14" fill="#0B1121"/>
+            <circle cx="270" cy="150" r="8" fill="#00D4FF"/>
+            <rect x="140" y="400" width="240" height="20" rx="4" fill="white" opacity="0.3"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT D</div>
+        <h2 class="concept-name">The Strategist</h2>
+        <div class="concept-subtitle">Chess Knight — The only piece that thinks in two dimensions</div>
+        <p class="concept-desc">
+          The chess knight is the most intelligent piece on the board — the only one that can jump over obstacles and move in non-linear patterns. It represents strategic thinking, the ability to approach problems from unexpected angles, and the cleverness to see moves others miss.
+        </p>
+        <p class="concept-desc">
+          A bold, geometric horse head silhouette with a glowing cyan eye. The knight metaphor is powerful: when your business faces obstacles, taylorsmart.ai doesn't go around them — we leap over them. Strong, authoritative, and immediately communicates strategic intelligence.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Strategy</span>
+          <span class="trait">Non-Linear Thinking</span>
+          <span class="trait">Authority</span>
+          <span class="trait gold">Bold</span>
+          <span class="trait gold">Premium Feel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT E — THE CORTEX (Neural Network) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="neuralCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+              <radialGradient id="neuralGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Central glow -->
+            <circle cx="256" cy="256" r="140" fill="url(#neuralGlow)"/>
+
+            <!-- Connection lines (drawn first, behind nodes) -->
+            <g stroke="white" stroke-width="3" opacity="0.2">
+              <!-- Central hub connections -->
+              <line x1="256" y1="256" x2="176" y2="168"/>
+              <line x1="256" y1="256" x2="336" y2="168"/>
+              <line x1="256" y1="256" x2="136" y2="272"/>
+              <line x1="256" y1="256" x2="376" y2="272"/>
+              <line x1="256" y1="256" x2="180" y2="360"/>
+              <line x1="256" y1="256" x2="332" y2="360"/>
+              <!-- Outer connections -->
+              <line x1="176" y1="168" x2="136" y2="272"/>
+              <line x1="176" y1="168" x2="256" y2="108"/>
+              <line x1="336" y1="168" x2="376" y2="272"/>
+              <line x1="336" y1="168" x2="256" y2="108"/>
+              <line x1="136" y1="272" x2="180" y2="360"/>
+              <line x1="376" y1="272" x2="332" y2="360"/>
+              <line x1="180" y1="360" x2="256" y2="400"/>
+              <line x1="332" y1="360" x2="256" y2="400"/>
+              <!-- Extra cross connections -->
+              <line x1="176" y1="168" x2="336" y2="168"/>
+              <line x1="180" y1="360" x2="332" y2="360"/>
+            </g>
+
+            <!-- Activated connection lines (cyan, select paths) -->
+            <g stroke="#00D4FF" stroke-width="3" opacity="0.5">
+              <line x1="256" y1="108" x2="336" y2="168"/>
+              <line x1="336" y1="168" x2="256" y2="256"/>
+              <line x1="256" y1="256" x2="180" y2="360"/>
+              <line x1="180" y1="360" x2="256" y2="400"/>
+            </g>
+
+            <!-- Outer nodes (white) -->
+            <circle cx="256" cy="108" r="16" fill="white"/>
+            <circle cx="176" cy="168" r="14" fill="white"/>
+            <circle cx="336" cy="168" r="16" fill="white"/>
+            <circle cx="136" cy="272" r="12" fill="white"/>
+            <circle cx="376" cy="272" r="12" fill="white"/>
+            <circle cx="180" cy="360" r="16" fill="white"/>
+            <circle cx="332" cy="360" r="14" fill="white"/>
+            <circle cx="256" cy="400" r="16" fill="white"/>
+
+            <!-- Activated outer nodes (cyan) -->
+            <circle cx="256" cy="108" r="7" fill="#00D4FF"/>
+            <circle cx="336" cy="168" r="7" fill="#00D4FF"/>
+            <circle cx="180" cy="360" r="7" fill="#00D4FF"/>
+            <circle cx="256" cy="400" r="7" fill="#00D4FF"/>
+
+            <!-- Central node (larger, prominent) -->
+            <circle cx="256" cy="256" r="28" fill="white"/>
+            <circle cx="256" cy="256" r="16" fill="url(#neuralCyan)"/>
+            <circle cx="256" cy="256" r="8" fill="white" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <g stroke="white" stroke-width="3" opacity="0.2">
+              <line x1="256" y1="256" x2="176" y2="168"/>
+              <line x1="256" y1="256" x2="336" y2="168"/>
+              <line x1="256" y1="256" x2="136" y2="272"/>
+              <line x1="256" y1="256" x2="376" y2="272"/>
+              <line x1="256" y1="256" x2="180" y2="360"/>
+              <line x1="256" y1="256" x2="332" y2="360"/>
+              <line x1="176" y1="168" x2="256" y2="108"/>
+              <line x1="336" y1="168" x2="256" y2="108"/>
+              <line x1="180" y1="360" x2="256" y2="400"/>
+              <line x1="332" y1="360" x2="256" y2="400"/>
+              <line x1="176" y1="168" x2="336" y2="168"/>
+              <line x1="180" y1="360" x2="332" y2="360"/>
+            </g>
+            <g stroke="#00D4FF" stroke-width="3" opacity="0.5">
+              <line x1="256" y1="108" x2="336" y2="168"/>
+              <line x1="336" y1="168" x2="256" y2="256"/>
+              <line x1="256" y1="256" x2="180" y2="360"/>
+              <line x1="180" y1="360" x2="256" y2="400"/>
+            </g>
+            <circle cx="256" cy="108" r="14" fill="white"/>
+            <circle cx="176" cy="168" r="12" fill="white"/>
+            <circle cx="336" cy="168" r="14" fill="white"/>
+            <circle cx="136" cy="272" r="10" fill="white"/>
+            <circle cx="376" cy="272" r="10" fill="white"/>
+            <circle cx="180" cy="360" r="14" fill="white"/>
+            <circle cx="332" cy="360" r="12" fill="white"/>
+            <circle cx="256" cy="400" r="14" fill="white"/>
+            <circle cx="256" cy="256" r="24" fill="white"/>
+            <circle cx="256" cy="256" r="14" fill="#00D4FF"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT E</div>
+        <h2 class="concept-name">The Cortex</h2>
+        <div class="concept-subtitle">Neural Network — Intelligence made visible</div>
+        <p class="concept-desc">
+          A network of interconnected nodes with a prominent central hub — a literal visualization of how intelligence works. Some connections are dormant (white, subtle), others are actively firing (cyan) — representing live, working AI. The large central node is taylorsmart.ai: the intelligence hub that connects everything.
+        </p>
+        <p class="concept-desc">
+          This directly communicates AI expertise and technological connectivity. The "activated path" through the network tells a story: data in, intelligence processed, solution out. Highly animatable — nodes could pulse and paths could light up.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">AI / Neural</span>
+          <span class="trait">Connectivity</span>
+          <span class="trait">Processing</span>
+          <span class="trait gold">Technical Cred</span>
+          <span class="trait gold">Animatable</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT F — THE EUREKA (Lightbulb) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="bulbCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+              <radialGradient id="bulbGlow" cx="50%" cy="42%" r="35%">
+                <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Subtle circuit traces -->
+            <line x1="72" y1="256" x2="132" y2="256" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="380" y1="256" x2="440" y2="256" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="72" cy="256" r="3" fill="#19214E"/>
+            <circle cx="440" cy="256" r="3" fill="#19214E"/>
+
+            <!-- Ambient glow -->
+            <circle cx="256" cy="216" r="160" fill="url(#bulbGlow)"/>
+
+            <!-- Bulb shape — geometric, not literal -->
+            <path d="
+              M 256 72
+              C 172 72, 112 148, 112 228
+              C 112 290, 148 340, 196 368
+              L 196 400
+              L 316 400
+              L 316 368
+              C 364 340, 400 290, 400 228
+              C 400 148, 340 72, 256 72
+              Z
+            " fill="white"/>
+
+            <!-- Base/screw (geometric bands) -->
+            <rect x="196" y="400" width="120" height="16" rx="3" fill="white" opacity="0.6"/>
+            <rect x="204" y="420" width="104" height="14" rx="3" fill="white" opacity="0.4"/>
+            <rect x="216" y="438" width="80" height="12" rx="6" fill="white" opacity="0.25"/>
+
+            <!-- Inner filament: geometric spark/star -->
+            <polygon
+              points="256,148 268,200 320,212 276,236 280,288 256,252 232,288 236,236 192,212 244,200"
+              fill="url(#bulbCyan)"
+            />
+
+            <!-- Central glow point -->
+            <circle cx="256" cy="218" r="16" fill="#00D4FF" opacity="0.4"/>
+            <circle cx="256" cy="218" r="8" fill="white" opacity="0.6"/>
+
+            <!-- Radiating light lines -->
+            <g stroke="#00D4FF" stroke-width="3" stroke-linecap="round" opacity="0.3">
+              <line x1="256" y1="52" x2="256" y2="32"/>
+              <line x1="140" y1="108" x2="126" y2="94"/>
+              <line x1="372" y1="108" x2="386" y2="94"/>
+              <line x1="92" y1="228" x2="72" y2="228"/>
+              <line x1="420" y1="228" x2="440" y2="228"/>
+            </g>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M256 72 C172 72, 112 148, 112 228 C112 290, 148 340, 196 368 L196 400 L316 400 L316 368 C364 340, 400 290, 400 228 C400 148, 340 72, 256 72 Z" fill="white"/>
+            <rect x="196" y="400" width="120" height="16" rx="3" fill="white" opacity="0.6"/>
+            <rect x="204" y="420" width="104" height="14" rx="3" fill="white" opacity="0.4"/>
+            <polygon points="256,148 268,200 320,212 276,236 280,288 256,252 232,288 236,236 192,212 244,200" fill="#00D4FF"/>
+            <circle cx="256" cy="218" r="8" fill="white" opacity="0.6"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT F</div>
+        <h2 class="concept-name">The Eureka</h2>
+        <div class="concept-subtitle">Lightbulb — The moment when intelligence meets innovation</div>
+        <p class="concept-desc">
+          The lightbulb is the universal symbol for a great idea. This version is bold and geometric — a clean bulb silhouette with a glowing cyan "spark" filament inside (carrying over from the Spark mark concept). Subtle radiating lines suggest illumination and energy. The screw base is rendered as minimal geometric bands.
+        </p>
+        <p class="concept-desc">
+          This concept says: "We're the ones who have the ideas that solve your problems." The inner spark could animate — pulsing gently to suggest always-active intelligence. Universally understood, friendly, approachable.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Innovation</span>
+          <span class="trait">Ideas</span>
+          <span class="trait">Illumination</span>
+          <span class="trait gold">Universal</span>
+          <span class="trait gold">Approachable</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT G — THE ARCHITECT (Blueprint/Build) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="archCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Blueprint grid (subtle) -->
+            <g stroke="#19214E" stroke-width="1" opacity="0.6">
+              <line x1="96" y1="96" x2="96" y2="416"/>
+              <line x1="176" y1="96" x2="176" y2="416"/>
+              <line x1="256" y1="96" x2="256" y2="416"/>
+              <line x1="336" y1="96" x2="336" y2="416"/>
+              <line x1="416" y1="96" x2="416" y2="416"/>
+              <line x1="96" y1="96" x2="416" y2="96"/>
+              <line x1="96" y1="176" x2="416" y2="176"/>
+              <line x1="96" y1="256" x2="416" y2="256"/>
+              <line x1="96" y1="336" x2="416" y2="336"/>
+              <line x1="96" y1="416" x2="416" y2="416"/>
+            </g>
+
+            <!-- Building blocks (stacked, ascending) -->
+            <!-- Bottom row: 4 blocks -->
+            <rect x="104" y="344" width="72" height="64" rx="6" fill="white" opacity="0.25"/>
+            <rect x="184" y="344" width="72" height="64" rx="6" fill="white" opacity="0.25"/>
+            <rect x="264" y="344" width="72" height="64" rx="6" fill="white" opacity="0.25"/>
+            <rect x="344" y="344" width="64" height="64" rx="6" fill="white" opacity="0.25"/>
+
+            <!-- Second row: 3 blocks -->
+            <rect x="104" y="272" width="72" height="64" rx="6" fill="white" opacity="0.45"/>
+            <rect x="184" y="272" width="72" height="64" rx="6" fill="white" opacity="0.45"/>
+            <rect x="264" y="272" width="72" height="64" rx="6" fill="white" opacity="0.45"/>
+
+            <!-- Third row: 2 blocks -->
+            <rect x="104" y="200" width="72" height="64" rx="6" fill="white" opacity="0.7"/>
+            <rect x="184" y="200" width="72" height="64" rx="6" fill="white" opacity="0.7"/>
+
+            <!-- Top block: the one being placed (cyan, active) -->
+            <rect x="104" y="128" width="72" height="64" rx="6" fill="url(#archCyan)"/>
+            <circle cx="140" cy="160" r="6" fill="white" opacity="0.5"/>
+
+            <!-- Ascending arrow/path -->
+            <path d="M400 380 L400 140 L380 160" stroke="#00D4FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+            <path d="M400 140 L420 160" stroke="#00D4FF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <g stroke="#19214E" stroke-width="1" opacity="0.5">
+              <line x1="96" y1="96" x2="96" y2="416"/><line x1="176" y1="96" x2="176" y2="416"/>
+              <line x1="256" y1="96" x2="256" y2="416"/><line x1="336" y1="96" x2="336" y2="416"/>
+              <line x1="96" y1="176" x2="416" y2="176"/><line x1="96" y1="256" x2="416" y2="256"/>
+              <line x1="96" y1="336" x2="416" y2="336"/><line x1="96" y1="416" x2="416" y2="416"/>
+            </g>
+            <rect x="104" y="344" width="72" height="64" rx="6" fill="white" opacity="0.25"/>
+            <rect x="184" y="344" width="72" height="64" rx="6" fill="white" opacity="0.25"/>
+            <rect x="264" y="344" width="72" height="64" rx="6" fill="white" opacity="0.25"/>
+            <rect x="104" y="272" width="72" height="64" rx="6" fill="white" opacity="0.45"/>
+            <rect x="184" y="272" width="72" height="64" rx="6" fill="white" opacity="0.45"/>
+            <rect x="104" y="200" width="72" height="64" rx="6" fill="white" opacity="0.7"/>
+            <rect x="104" y="128" width="72" height="64" rx="6" fill="#00D4FF"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT G</div>
+        <h2 class="concept-name">The Architect</h2>
+        <div class="concept-subtitle">Blueprint Blocks — We build things that grow</div>
+        <p class="concept-desc">
+          Stacked geometric blocks on a blueprint grid, ascending like a staircase — with the top block glowing cyan, actively being placed. This represents the core of what taylorsmart.ai does: building things. Websites, apps, networks, systems — layer by layer, block by block, each one lifting the client higher.
+        </p>
+        <p class="concept-desc">
+          The blueprint grid anchors it in precision engineering. The ascending shape communicates growth and progress. The active top block says "we're always building the next thing." Directly speaks to full-stack development and IT infrastructure work.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Building</span>
+          <span class="trait">Growth</span>
+          <span class="trait">Engineering</span>
+          <span class="trait gold">Service-Focused</span>
+          <span class="trait gold">Progress</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT H — THE SIGNAL (Broadcast/WiFi) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="sigCyan" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#0080B0"/><stop offset="100%" stop-color="#00D4FF"/>
+              </linearGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Signal arcs (radiating upward from the base node) -->
+            <!-- Arc 1 (innermost, brightest) -->
+            <path d="M208 280 A68 68 0 0 1 304 280" stroke="url(#sigCyan)" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <!-- Arc 2 -->
+            <path d="M172 280 A100 100 0 0 1 340 280" stroke="url(#sigCyan)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.65"/>
+            <!-- Arc 3 -->
+            <path d="M136 280 A132 132 0 0 1 376 280" stroke="url(#sigCyan)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+            <!-- Arc 4 (outermost, faintest) -->
+            <path d="M100 280 A164 164 0 0 1 412 280" stroke="url(#sigCyan)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.2"/>
+
+            <!-- Base tower/antenna shape -->
+            <rect x="244" y="296" width="24" height="100" rx="4" fill="white"/>
+            <rect x="228" y="380" width="56" height="16" rx="4" fill="white" opacity="0.5"/>
+
+            <!-- Antenna top node -->
+            <circle cx="256" cy="296" r="20" fill="white"/>
+            <circle cx="256" cy="296" r="10" fill="url(#sigCyan)"/>
+            <circle cx="256" cy="296" r="5" fill="white" opacity="0.4"/>
+
+            <!-- Small signal dots floating outward -->
+            <circle cx="160" cy="180" r="5" fill="#00D4FF" opacity="0.3"/>
+            <circle cx="352" cy="196" r="4" fill="#00D4FF" opacity="0.25"/>
+            <circle cx="128" cy="232" r="3" fill="#00D4FF" opacity="0.2"/>
+            <circle cx="392" cy="240" r="4" fill="#00D4FF" opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M208 280 A68 68 0 0 1 304 280" stroke="#00D4FF" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <path d="M172 280 A100 100 0 0 1 340 280" stroke="#00D4FF" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.6"/>
+            <path d="M136 280 A132 132 0 0 1 376 280" stroke="#00D4FF" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.35"/>
+            <rect x="244" y="296" width="24" height="100" rx="4" fill="white"/>
+            <circle cx="256" cy="296" r="20" fill="white"/>
+            <circle cx="256" cy="296" r="10" fill="#00D4FF"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT H</div>
+        <h2 class="concept-name">The Signal</h2>
+        <div class="concept-subtitle">Broadcast Tower — Connectivity that reaches every corner</div>
+        <p class="concept-desc">
+          A bold antenna broadcasting concentric signal arcs in cyan — each arc fading as it reaches further out. This directly represents taylorsmart.ai's networking and connectivity services (WiFi installation, IT infrastructure) while also serving as a metaphor for broadcasting intelligence and reaching businesses throughout the Sugarcreek area.
+        </p>
+        <p class="concept-desc">
+          The signal radiating outward communicates reach, reliability, and always-on service. The base node glowing with the cyan core suggests the AI intelligence powering the broadcast. Extremely clean and recognizable at any size. The arcs are highly animatable — pulsing outward to show active connectivity.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Connectivity</span>
+          <span class="trait">Reach</span>
+          <span class="trait">Reliability</span>
+          <span class="trait gold">Service-Literal</span>
+          <span class="trait gold">Local Reach</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT I — THE KEYSTONE (Unlock/Key) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="keyCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+              <radialGradient id="keyGlow" cx="35%" cy="40%" r="30%">
+                <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+
+            <!-- Subtle circuit traces -->
+            <line x1="360" y1="400" x2="440" y2="400" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="440" cy="400" r="3" fill="#19214E"/>
+            <line x1="72" y1="140" x2="120" y2="140" stroke="#19214E" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="72" cy="140" r="3" fill="#19214E"/>
+
+            <!-- Glow behind key head -->
+            <circle cx="192" cy="200" r="120" fill="url(#keyGlow)"/>
+
+            <!-- Key shape — geometric and bold -->
+            <!-- Key head: thick circle ring -->
+            <circle cx="192" cy="200" r="88" fill="white"/>
+            <circle cx="192" cy="200" r="52" fill="#0B1121"/>
+
+            <!-- Key head inner: cyan core -->
+            <circle cx="192" cy="200" r="28" fill="url(#keyCyan)"/>
+            <circle cx="192" cy="200" r="14" fill="white" opacity="0.3"/>
+
+            <!-- Key shaft -->
+            <rect x="268" y="184" width="172" height="32" rx="6" fill="white"/>
+
+            <!-- Key teeth (geometric, angular) -->
+            <rect x="340" y="216" width="28" height="40" rx="4" fill="white"/>
+            <rect x="380" y="216" width="28" height="56" rx="4" fill="white"/>
+            <rect x="420" y="216" width="28" height="32" rx="4" fill="white"/>
+
+            <!-- Unlock spark -->
+            <g transform="translate(192, 200)" opacity="0.4">
+              <line x1="-6" y1="-40" x2="-6" y2="-52" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+              <line x1="6" y1="-40" x2="6" y2="-48" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+              <line x1="-38" y1="-12" x2="-50" y2="-16" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+              <line x1="-34" y1="12" x2="-46" y2="18" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <circle cx="192" cy="200" r="88" fill="white"/>
+            <circle cx="192" cy="200" r="52" fill="#0B1121"/>
+            <circle cx="192" cy="200" r="28" fill="#00D4FF"/>
+            <rect x="268" y="184" width="172" height="32" rx="6" fill="white"/>
+            <rect x="340" y="216" width="28" height="40" rx="4" fill="white"/>
+            <rect x="380" y="216" width="28" height="56" rx="4" fill="white"/>
+            <rect x="420" y="216" width="28" height="32" rx="4" fill="white"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT I</div>
+        <h2 class="concept-name">The Keystone</h2>
+        <div class="concept-subtitle">Key — Unlocking potential through technology</div>
+        <p class="concept-desc">
+          A bold, geometric key with a glowing cyan core at its head. The key is the ultimate metaphor for what taylorsmart.ai does: unlocking business potential that was previously inaccessible. The circular key head becomes a portal — technology as the gateway to growth. Small "unlock sparks" radiate from the head suggesting active transformation.
+        </p>
+        <p class="concept-desc">
+          "We unlock what technology can do for your business." The geometric teeth at the end add a technical, precise quality — each tooth represents a different service (web, AI, networking, education). Direct, powerful messaging that any business owner immediately understands.
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Unlocking</span>
+          <span class="trait">Access</span>
+          <span class="trait">Transformation</span>
+          <span class="trait gold">Clear Metaphor</span>
+          <span class="trait gold">Business-Focused</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CONCEPT J — THE SPARK (Original, refined) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="concept">
+      <div class="concept-icon-area">
+        <div class="concept-icon-card">
+          <svg viewBox="0 0 512 512" width="200" height="200">
+            <defs>
+              <linearGradient id="sparkCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/>
+              </linearGradient>
+              <radialGradient id="sparkGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <line x1="72" y1="176" x2="148" y2="176" stroke="#19214E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="364" y1="176" x2="440" y2="176" stroke="#19214E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="72" y1="336" x2="148" y2="336" stroke="#19214E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="364" y1="336" x2="440" y2="336" stroke="#19214E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="256" y1="72" x2="256" y2="124" stroke="#19214E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="256" y1="388" x2="256" y2="440" stroke="#19214E" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="72" cy="176" r="4" fill="#19214E"/>
+            <circle cx="440" cy="176" r="4" fill="#19214E"/>
+            <circle cx="72" cy="336" r="4" fill="#19214E"/>
+            <circle cx="440" cy="336" r="4" fill="#19214E"/>
+            <circle cx="256" cy="72" r="4" fill="#19214E"/>
+            <circle cx="256" cy="440" r="4" fill="#19214E"/>
+            <polygon points="256,88 298,210 432,256 298,302 256,424 214,302 80,256 214,210" fill="white" stroke="white" stroke-width="6" stroke-linejoin="round"/>
+            <circle cx="256" cy="256" r="48" fill="url(#sparkGlow)"/>
+            <circle cx="256" cy="256" r="18" fill="url(#sparkCyan)"/>
+            <circle cx="256" cy="256" r="10" fill="white" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="concept-lockup">
+          <svg viewBox="0 0 512 512" width="40" height="40">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <polygon points="256,88 298,210 432,256 298,302 256,424 214,302 80,256 214,210" fill="white" stroke="white" stroke-width="6" stroke-linejoin="round"/>
+            <circle cx="256" cy="256" r="18" fill="#00D4FF"/>
+            <circle cx="256" cy="256" r="10" fill="white" opacity="0.4"/>
+          </svg>
+          <div class="concept-wordmark"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+      </div>
+      <div class="concept-info">
+        <div class="concept-number">CONCEPT J</div>
+        <h2 class="concept-name">The Spark</h2>
+        <div class="concept-subtitle">4-Pointed Star — Pure energy and precision</div>
+        <p class="concept-desc">
+          The original v2 concept included here for comparison. A bold four-pointed geometric star with a glowing cyan intelligence core. Clean, abstract, highly geometric. Represents energy, precision, and a flash of brilliance. Circuit traces in the background ground it in technology.
+        </p>
+        <p class="concept-desc">
+          The most abstract option — no literal metaphor, just pure geometric energy. Works at every size. The simplest mark on this page, which can be a strength (timeless, versatile) or a weakness (less storytelling potential).
+        </p>
+        <div class="concept-traits">
+          <span class="trait">Energy</span>
+          <span class="trait">Precision</span>
+          <span class="trait">Abstract</span>
+          <span class="trait gold">Minimal</span>
+          <span class="trait gold">Timeless</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p style="font-size: 20px; font-weight: 700; color: #00D4FF; font-family: var(--font-mono); margin-bottom: 8px;">taylorsmart.ai</p>
+    <p>Logo Concept Exploration — 10 Concepts</p>
+  </footer>
+
+</body>
+</html>

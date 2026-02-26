@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>taylorsmart.ai — Refined Logo Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary-950: #0B1121;
+      --primary-900: #19214E;
+      --primary-800: #263261;
+      --primary-700: #2D3B6B;
+      --accent-500: #00D4FF;
+      --accent-600: #00AADF;
+      --accent-700: #0080B0;
+      --highlight-500: #FFC107;
+      --neutral-100: #F1F3F7;
+      --neutral-200: #E2E5ED;
+      --neutral-300: #CDD2DE;
+      --neutral-400: #9BA3B8;
+      --neutral-500: #6B7492;
+      --neutral-600: #515A74;
+      --neutral-700: #3C4459;
+      --neutral-800: #282E3F;
+      --neutral-900: #181C28;
+      --neutral-950: #0D0F16;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--neutral-950); color: var(--neutral-100); -webkit-font-smoothing: antialiased; }
+
+    .header {
+      padding: 72px 60px 56px;
+      background: linear-gradient(135deg, var(--primary-950), var(--primary-900));
+      position: relative; overflow: hidden;
+    }
+    .header::before {
+      content:''; position:absolute; top:-40%; right:-15%; width:500px; height:500px;
+      background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%); border-radius:50%;
+    }
+    .header .label { font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:var(--accent-500); margin-bottom:12px; position:relative; }
+    .header h1 { font-size:44px; font-weight:800; color:white; letter-spacing:-2px; line-height:1.1; position:relative; }
+    .header p { margin-top:14px; font-size:17px; color:var(--neutral-400); max-width:560px; position:relative; line-height:1.6; }
+
+    .theme-divider {
+      padding: 40px 60px 16px;
+      border-top: 1px solid var(--neutral-800);
+    }
+    .theme-divider h2 {
+      font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent-500);
+    }
+    .theme-divider p { font-size: 14px; color: var(--neutral-500); margin-top: 4px; }
+
+    .grid {
+      padding: 24px 60px 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--neutral-900);
+      border: 1px solid var(--neutral-800);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .card:hover { border-color: var(--accent-700); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
+
+    .card-icon {
+      background: var(--primary-950);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--neutral-800);
+    }
+
+    .card-lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: rgba(0,0,0,0.2);
+      border-bottom: 1px solid var(--neutral-800);
+    }
+    .card-lockup .wm { font-size: 20px; letter-spacing: -0.8px; white-space: nowrap; }
+    .card-lockup .b { font-weight: 800; color: white; }
+    .card-lockup .l { font-weight: 300; color: rgba(255,255,255,0.55); }
+    .card-lockup .c { font-weight: 700; color: var(--accent-500); }
+
+    .card-info { padding: 20px; }
+    .card-number { font-family: var(--font-mono); font-size: 10px; color: var(--accent-500); opacity: 0.6; margin-bottom: 4px; }
+    .card-name { font-size: 20px; font-weight: 800; color: white; letter-spacing: -0.5px; margin-bottom: 4px; }
+    .card-sub { font-size: 13px; color: var(--accent-600); margin-bottom: 12px; }
+    .card-desc { font-size: 13px; color: var(--neutral-400); line-height: 1.6; }
+
+    .footer { padding: 48px 60px; text-align: center; border-top: 1px solid var(--neutral-800); }
+    .footer .domain { font-size: 18px; font-weight: 700; color: var(--accent-500); font-family: var(--font-mono); margin-bottom: 6px; }
+    .footer p { font-size: 13px; color: var(--neutral-500); }
+
+    @media (max-width: 960px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; padding: 24px; } .header { padding: 48px 24px; } }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="label">Refined Exploration</div>
+  <h1>Spark / Eureka / Navigator</h1>
+  <p>Deeper variations on the three strongest themes — kept simple, bold, and catchy. Each one should work from favicon to billboard.</p>
+</header>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SPARK THEME -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="theme-divider">
+  <h2>Spark Theme</h2>
+  <p>Energy, brilliance, a flash of intelligence</p>
+</div>
+
+<div class="grid">
+
+  <!-- S1: The Pulse -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="s1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="s1r" cx="50%" cy="50%" r="40%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.25"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="256" r="100" fill="url(#s1r)"/>
+        <!-- 4 tapered blades -->
+        <path d="M256 80 L268 224 L256 240 L244 224 Z" fill="white"/>
+        <path d="M432 256 L288 244 L272 256 L288 268 Z" fill="white"/>
+        <path d="M256 432 L244 288 L256 272 L268 288 Z" fill="white"/>
+        <path d="M80 256 L224 268 L240 256 L224 244 Z" fill="white"/>
+        <!-- 4 small diagonal accents -->
+        <line x1="320" y1="148" x2="352" y2="116" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.35"/>
+        <line x1="364" y1="192" x2="384" y2="172" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+        <line x1="148" y1="364" x2="128" y2="384" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+        <!-- Center -->
+        <circle cx="256" cy="256" r="20" fill="url(#s1g)"/>
+        <circle cx="256" cy="256" r="10" fill="white" opacity="0.45"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 80 L268 224 L256 240 L244 224 Z" fill="white"/>
+        <path d="M432 256 L288 244 L272 256 L288 268 Z" fill="white"/>
+        <path d="M256 432 L244 288 L256 272 L268 288 Z" fill="white"/>
+        <path d="M80 256 L224 268 L240 256 L224 244 Z" fill="white"/>
+        <circle cx="256" cy="256" r="20" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">S1</div>
+      <div class="card-name">The Pulse</div>
+      <div class="card-sub">Tapered blades with sparkle accents</div>
+      <div class="card-desc">Sharper, more refined take on the spark. Tapered blade shapes radiate from a cyan core — feels like a camera flash or a pulse of energy. Small diagonal accents add a sparkle quality. More dynamic than the original.</div>
+    </div>
+  </div>
+
+  <!-- S2: The North Star -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="s2g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="s2r" cx="50%" cy="40%" r="40%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.2"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="240" r="120" fill="url(#s2r)"/>
+        <!-- Elongated upward star — top point is longest -->
+        <polygon
+          points="256,72 278,210 412,240 282,270 256,420 230,270 100,240 234,210"
+          fill="white" stroke="white" stroke-width="4" stroke-linejoin="round"
+        />
+        <!-- Center -->
+        <circle cx="256" cy="240" r="18" fill="url(#s2g)"/>
+        <circle cx="256" cy="240" r="9" fill="white" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <polygon points="256,72 278,210 412,240 282,270 256,420 230,270 100,240 234,210" fill="white" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+        <circle cx="256" cy="240" r="18" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">S2</div>
+      <div class="card-name">The North Star</div>
+      <div class="card-sub">Asymmetric star — guiding upward</div>
+      <div class="card-desc">The top point stretches higher, pulling the eye upward. Suggests guidance, aspiration, and direction. Like a north star leading the way. Combines spark energy with navigator-like purpose. Subtle shift from center adds dynamism.</div>
+    </div>
+  </div>
+
+  <!-- S3: The Core -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="s3g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="s3r" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.2"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+          <mask id="s3mask">
+            <circle cx="256" cy="256" r="160" fill="white"/>
+            <polygon points="256,80 296,212 432,256 296,300 256,432 216,300 80,256 216,212" fill="black"/>
+          </mask>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- Glow behind -->
+        <circle cx="256" cy="256" r="180" fill="url(#s3r)"/>
+        <!-- White disc with star cutout -->
+        <circle cx="256" cy="256" r="160" fill="white" mask="url(#s3mask)"/>
+        <!-- Cyan star visible through cutout -->
+        <polygon points="256,80 296,212 432,256 296,300 256,432 216,300 80,256 216,212" fill="url(#s3g)" opacity="0.9"/>
+        <!-- Inner glow -->
+        <circle cx="256" cy="256" r="28" fill="white" opacity="0.2"/>
+        <circle cx="256" cy="256" r="14" fill="white" opacity="0.35"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="256" r="160" fill="white" mask="url(#s3mask2)"/>
+        <polygon points="256,80 296,212 432,256 296,300 256,432 216,300 80,256 216,212" fill="#00D4FF"/>
+        <circle cx="256" cy="256" r="14" fill="white" opacity="0.35"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">S3</div>
+      <div class="card-name">The Core</div>
+      <div class="card-sub">Inverted spark — intelligence revealed</div>
+      <div class="card-desc">The spark shape is filled with cyan and framed by a white ring. Inverts the figure/ground — the intelligence IS the shape, contained within structure. Feels like peering into a reactor core or power source. Bold, distinctive, heavy.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- EUREKA THEME -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="theme-divider">
+  <h2>Eureka Theme</h2>
+  <p>The moment of insight, illumination, bright ideas</p>
+</div>
+
+<div class="grid">
+
+  <!-- E1: The Beacon -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="e1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="e1r" cx="50%" cy="38%" r="30%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.2"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="210" r="140" fill="url(#e1r)"/>
+        <!-- Minimal bulb: just circle + base -->
+        <circle cx="256" cy="208" r="108" fill="white"/>
+        <!-- Base bands -->
+        <rect x="206" y="316" width="100" height="18" rx="9" fill="white" opacity="0.7"/>
+        <rect x="216" y="340" width="80" height="16" rx="8" fill="white" opacity="0.45"/>
+        <rect x="230" y="362" width="52" height="14" rx="7" fill="white" opacity="0.25"/>
+        <!-- Inner: simple spark -->
+        <polygon points="256,136 266,186 308,196 270,210 274,252 256,222 238,252 242,210 204,196 246,186" fill="url(#e1g)"/>
+        <!-- Core glow -->
+        <circle cx="256" cy="196" r="10" fill="white" opacity="0.5"/>
+        <!-- Radiating lines -->
+        <g stroke="#00D4FF" stroke-width="3.5" stroke-linecap="round" opacity="0.3">
+          <line x1="256" y1="72" x2="256" y2="52"/>
+          <line x1="148" y1="112" x2="134" y2="98"/>
+          <line x1="364" y1="112" x2="378" y2="98"/>
+          <line x1="108" y1="208" x2="84" y2="208"/>
+          <line x1="404" y1="208" x2="428" y2="208"/>
+        </g>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="208" r="108" fill="white"/>
+        <rect x="206" y="316" width="100" height="18" rx="9" fill="white" opacity="0.7"/>
+        <rect x="216" y="340" width="80" height="16" rx="8" fill="white" opacity="0.4"/>
+        <polygon points="256,136 266,186 308,196 270,210 274,252 256,222 238,252 242,210 204,196 246,186" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">E1</div>
+      <div class="card-name">The Beacon</div>
+      <div class="card-sub">Clean lightbulb with spark filament</div>
+      <div class="card-desc">The original Eureka refined — cleaner proportions, the spark mark living inside as the filament. The bulb is a bold white circle, the base is minimal bands. Radiating lines add energy. The spark-inside-the-bulb creates a logo-within-a-logo.</div>
+    </div>
+  </div>
+
+  <!-- E2: The Filament -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="e2g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="e2r" cx="50%" cy="50%" r="45%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.2"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+          <filter id="e2glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- Ambient glow -->
+        <circle cx="256" cy="256" r="160" fill="url(#e2r)"/>
+        <!-- The filament: a flowing geometric shape, like a stylized flame/energy -->
+        <g filter="url(#e2glow)">
+          <path d="M256 100 C280 180, 340 200, 320 256 C300 310, 340 340, 300 380 C280 400, 256 420, 256 420 C256 420, 232 400, 212 380 C172 340, 212 310, 192 256 C172 200, 232 180, 256 100 Z"
+                fill="url(#e2g)" opacity="0.85"/>
+        </g>
+        <!-- White inner highlight -->
+        <path d="M256 160 C268 210, 296 224, 288 256 C280 286, 296 304, 276 340 C266 356, 256 368, 256 368 C256 368, 246 356, 236 340 C216 304, 232 286, 224 256 C216 224, 244 210, 256 160 Z"
+              fill="white" opacity="0.3"/>
+        <!-- Core bright point -->
+        <circle cx="256" cy="256" r="14" fill="white" opacity="0.5"/>
+        <circle cx="256" cy="256" r="7" fill="white" opacity="0.8"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 100 C280 180, 340 200, 320 256 C300 310, 340 340, 300 380 C280 400, 256 420, 256 420 C256 420, 232 400, 212 380 C172 340, 212 310, 192 256 C172 200, 232 180, 256 100 Z" fill="#00D4FF"/>
+        <circle cx="256" cy="256" r="10" fill="white" opacity="0.5"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">E2</div>
+      <div class="card-name">The Filament</div>
+      <div class="card-sub">Raw energy — no shell, just the flame</div>
+      <div class="card-desc">Strip the lightbulb away — what's left is the raw energy itself. A flowing, organic cyan flame shape that feels alive and dynamic. More expressive and artistic than the geometric concepts. Suggests pure creative energy and innovation without boundaries.</div>
+    </div>
+  </div>
+
+  <!-- E3: The Moment -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="e3g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- The head: a bold circle -->
+        <circle cx="256" cy="304" r="100" fill="white"/>
+        <!-- Face detail: subtle, friendly -->
+        <circle cx="224" cy="296" r="8" fill="#0B1121" opacity="0.6"/>
+        <circle cx="288" cy="296" r="8" fill="#0B1121" opacity="0.6"/>
+        <path d="M236 328 Q256 344 276 328" stroke="#0B1121" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.4"/>
+        <!-- The spark above: eureka moment -->
+        <polygon points="256,92 268,140 308,148 272,164 276,208 256,180 236,208 240,164 204,148 244,140"
+                 fill="url(#e3g)"/>
+        <circle cx="256" cy="150" r="6" fill="white" opacity="0.5"/>
+        <!-- Small accent sparks -->
+        <circle cx="320" cy="112" r="4" fill="#00D4FF" opacity="0.3"/>
+        <circle cx="192" cy="120" r="3" fill="#00D4FF" opacity="0.25"/>
+        <circle cx="340" cy="148" r="3" fill="#00D4FF" opacity="0.2"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="304" r="100" fill="white"/>
+        <circle cx="224" cy="296" r="8" fill="#0B1121" opacity="0.5"/>
+        <circle cx="288" cy="296" r="8" fill="#0B1121" opacity="0.5"/>
+        <polygon points="256,92 268,140 308,148 272,164 276,208 256,180 236,208 240,164 204,148 244,140" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">E3</div>
+      <div class="card-name">The Moment</div>
+      <div class="card-sub">The "aha" — a face having an idea</div>
+      <div class="card-desc">The most playful concept: a simple circular face with a spark above its head — the universal "lightbulb moment." Friendly, approachable, and instantly understood by any audience. Great mascot potential. The spark above could animate as a thinking/processing indicator.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- NAVIGATOR THEME -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="theme-divider">
+  <h2>Navigator Theme</h2>
+  <p>Finding the smart path, solving complexity</p>
+</div>
+
+<div class="grid">
+
+  <!-- N1: The Route -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="n1g" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#0080B0"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- Background dots: grid of faint points suggesting complexity -->
+        <g fill="white" opacity="0.06">
+          <circle cx="96" cy="96" r="4"/><circle cx="176" cy="96" r="4"/><circle cx="256" cy="96" r="4"/><circle cx="336" cy="96" r="4"/><circle cx="416" cy="96" r="4"/>
+          <circle cx="96" cy="176" r="4"/><circle cx="176" cy="176" r="4"/><circle cx="256" cy="176" r="4"/><circle cx="336" cy="176" r="4"/><circle cx="416" cy="176" r="4"/>
+          <circle cx="96" cy="256" r="4"/><circle cx="176" cy="256" r="4"/><circle cx="256" cy="256" r="4"/><circle cx="336" cy="256" r="4"/><circle cx="416" cy="256" r="4"/>
+          <circle cx="96" cy="336" r="4"/><circle cx="176" cy="336" r="4"/><circle cx="256" cy="336" r="4"/><circle cx="336" cy="336" r="4"/><circle cx="416" cy="336" r="4"/>
+          <circle cx="96" cy="416" r="4"/><circle cx="176" cy="416" r="4"/><circle cx="256" cy="416" r="4"/><circle cx="336" cy="416" r="4"/><circle cx="416" cy="416" r="4"/>
+        </g>
+        <!-- The Route: bold angular path, no maze walls -->
+        <path d="M96 416 L96 256 L256 256 L256 176 L336 176 L336 96 L416 96"
+              stroke="url(#n1g)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- Start node -->
+        <circle cx="96" cy="416" r="18" fill="white"/>
+        <circle cx="96" cy="416" r="9" fill="#0080B0"/>
+        <!-- End node -->
+        <circle cx="416" cy="96" r="18" fill="white"/>
+        <circle cx="416" cy="96" r="9" fill="#00D4FF"/>
+        <!-- Turn nodes (subtle) -->
+        <circle cx="96" cy="256" r="6" fill="white" opacity="0.4"/>
+        <circle cx="256" cy="256" r="6" fill="white" opacity="0.4"/>
+        <circle cx="256" cy="176" r="6" fill="white" opacity="0.4"/>
+        <circle cx="336" cy="176" r="6" fill="white" opacity="0.4"/>
+        <circle cx="336" cy="96" r="6" fill="white" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M96 416 L96 256 L256 256 L256 176 L336 176 L336 96 L416 96" stroke="#00D4FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="96" cy="416" r="16" fill="white"/><circle cx="96" cy="416" r="8" fill="#0080B0"/>
+        <circle cx="416" cy="96" r="16" fill="white"/><circle cx="416" cy="96" r="8" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">N1</div>
+      <div class="card-name">The Route</div>
+      <div class="card-sub">Just the solution — no noise</div>
+      <div class="card-desc">Strip the maze away entirely. All that remains is the confident, clean path from problem (bottom-left) to solution (top-right). A grid of faint dots hints at hidden complexity, but the bold cyan route cuts through it decisively. Minimal, impactful, tells the whole story in one line.</div>
+    </div>
+  </div>
+
+  <!-- N2: The Circuit Path -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="n2g" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0080B0"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- Circuit trace path -->
+        <path d="M96 380 L176 380 L176 296 L296 296 L296 216 L216 216 L216 136 L416 136"
+              stroke="url(#n2g)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- PCB-style junction nodes (squares) -->
+        <rect x="168" y="372" width="16" height="16" rx="3" fill="white"/>
+        <rect x="168" y="288" width="16" height="16" rx="3" fill="white"/>
+        <rect x="288" y="288" width="16" height="16" rx="3" fill="white"/>
+        <rect x="288" y="208" width="16" height="16" rx="3" fill="white"/>
+        <rect x="208" y="208" width="16" height="16" rx="3" fill="white"/>
+        <rect x="208" y="128" width="16" height="16" rx="3" fill="white"/>
+        <!-- Start: round -->
+        <circle cx="96" cy="380" r="16" fill="white"/>
+        <circle cx="96" cy="380" r="8" fill="#0080B0"/>
+        <!-- End: round with glow -->
+        <circle cx="416" cy="136" r="16" fill="white"/>
+        <circle cx="416" cy="136" r="8" fill="#00D4FF"/>
+        <circle cx="416" cy="136" r="24" fill="#00D4FF" opacity="0.12"/>
+        <!-- Faint unused traces -->
+        <line x1="336" y1="296" x2="416" y2="296" stroke="#19214E" stroke-width="4" stroke-linecap="round"/>
+        <line x1="96" y1="216" x2="160" y2="216" stroke="#19214E" stroke-width="4" stroke-linecap="round"/>
+        <line x1="336" y1="136" x2="336" y2="216" stroke="#19214E" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M96 380 L176 380 L176 296 L296 296 L296 216 L216 216 L216 136 L416 136" stroke="#00D4FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="96" cy="380" r="14" fill="white"/><circle cx="96" cy="380" r="7" fill="#0080B0"/>
+        <circle cx="416" cy="136" r="14" fill="white"/><circle cx="416" cy="136" r="7" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">N2</div>
+      <div class="card-name">The Circuit Path</div>
+      <div class="card-sub">PCB trace aesthetic — tech DNA</div>
+      <div class="card-desc">The route rendered as a circuit board trace with square junction nodes at every turn. Faint unused traces in the background show roads not taken. Bridges navigator pathfinding with deep tech identity. Feels engineered, precise, intentional — every turn is calculated.</div>
+    </div>
+  </div>
+
+  <!-- N3: The Spiral -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="n3g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="n3r" cx="50%" cy="50%" r="45%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.15"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="256" r="160" fill="url(#n3r)"/>
+        <!-- Concentric angular maze rings (square spirals) -->
+        <!-- Outer ring -->
+        <path d="M96 96 L416 96 L416 416 L96 416 L96 176" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.15"/>
+        <!-- Ring 2 -->
+        <path d="M176 176 L336 176 L336 336 L176 336 L176 240" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.15"/>
+        <!-- Solution path: spiral inward -->
+        <path d="M96 136
+                 L96 96 L416 96 L416 416 L96 416 L96 176
+                 L176 176 L336 176 L336 336 L176 336 L176 240
+                 L256 240 L256 280"
+              stroke="url(#n3g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- Entry node -->
+        <circle cx="96" cy="136" r="14" fill="white"/>
+        <circle cx="96" cy="136" r="7" fill="#0080B0"/>
+        <!-- Center goal -->
+        <circle cx="256" cy="280" r="20" fill="white"/>
+        <circle cx="256" cy="280" r="10" fill="url(#n3g)"/>
+        <circle cx="256" cy="280" r="5" fill="white" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M96 96 L416 96 L416 416 L96 416 L96 176 L176 176 L336 176 L336 336 L176 336 L176 240 L256 240 L256 280" stroke="#00D4FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="96" cy="136" r="12" fill="white"/>
+        <circle cx="256" cy="280" r="16" fill="white"/>
+        <circle cx="256" cy="280" r="8" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">N3</div>
+      <div class="card-name">The Spiral</div>
+      <div class="card-sub">Angular spiral converging to the answer</div>
+      <div class="card-desc">A square spiral path that winds inward to a glowing cyan center — the solution. The angular geometry keeps it feeling technical rather than organic. Communicates drilling down through layers of complexity to reach the core answer. The journey is visible, the destination is certain.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- HYBRID CONCEPTS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="theme-divider">
+  <h2>Hybrid Concepts</h2>
+  <p>Combining themes — spark meets path, eureka meets circuit</p>
+</div>
+
+<div class="grid">
+
+  <!-- H1: The Spark Path -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="h1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="h1r" cx="50%" cy="50%" r="42%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.2"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="256" r="160" fill="url(#h1r)"/>
+        <!-- Star shape drawn as a connected circuit path -->
+        <path d="M256 88 L298 210 L432 256 L298 302 L256 424 L214 302 L80 256 L214 210 Z"
+              fill="none" stroke="url(#h1g)" stroke-width="8" stroke-linejoin="round"/>
+        <!-- Junction nodes at each point -->
+        <circle cx="256" cy="88" r="12" fill="white"/>
+        <circle cx="432" cy="256" r="12" fill="white"/>
+        <circle cx="256" cy="424" r="12" fill="white"/>
+        <circle cx="80" cy="256" r="12" fill="white"/>
+        <!-- Waist nodes -->
+        <circle cx="298" cy="210" r="8" fill="white" opacity="0.5"/>
+        <circle cx="298" cy="302" r="8" fill="white" opacity="0.5"/>
+        <circle cx="214" cy="302" r="8" fill="white" opacity="0.5"/>
+        <circle cx="214" cy="210" r="8" fill="white" opacity="0.5"/>
+        <!-- Center hub -->
+        <circle cx="256" cy="256" r="22" fill="white"/>
+        <circle cx="256" cy="256" r="12" fill="url(#h1g)"/>
+        <circle cx="256" cy="256" r="6" fill="white" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M256 88 L298 210 L432 256 L298 302 L256 424 L214 302 L80 256 L214 210 Z" fill="none" stroke="#00D4FF" stroke-width="8" stroke-linejoin="round"/>
+        <circle cx="256" cy="88" r="10" fill="white"/>
+        <circle cx="432" cy="256" r="10" fill="white"/>
+        <circle cx="256" cy="424" r="10" fill="white"/>
+        <circle cx="80" cy="256" r="10" fill="white"/>
+        <circle cx="256" cy="256" r="18" fill="white"/>
+        <circle cx="256" cy="256" r="10" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">H1</div>
+      <div class="card-name">The Spark Path</div>
+      <div class="card-sub">Star outline as circuit — spark meets navigator</div>
+      <div class="card-desc">The 4-pointed star shape rendered as a circuit trace outline with junction nodes at each point and waist. The star becomes a network. The center hub connects everything. Combines the energy of the spark with the connected-path thinking of the navigator. Open and airy.</div>
+    </div>
+  </div>
+
+  <!-- H2: The Bright Route -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="h2g" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0080B0"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+          <radialGradient id="h2r" cx="75%" cy="25%" r="30%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.25"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <!-- Glow at destination -->
+        <circle cx="380" cy="132" r="100" fill="url(#h2r)"/>
+        <!-- Faint grid dots -->
+        <g fill="white" opacity="0.05">
+          <circle cx="136" cy="136" r="3"/><circle cx="216" cy="136" r="3"/><circle cx="296" cy="136" r="3"/><circle cx="376" cy="136" r="3"/>
+          <circle cx="136" cy="216" r="3"/><circle cx="216" cy="216" r="3"/><circle cx="296" cy="216" r="3"/><circle cx="376" cy="216" r="3"/>
+          <circle cx="136" cy="296" r="3"/><circle cx="216" cy="296" r="3"/><circle cx="296" cy="296" r="3"/><circle cx="376" cy="296" r="3"/>
+          <circle cx="136" cy="376" r="3"/><circle cx="216" cy="376" r="3"/><circle cx="296" cy="376" r="3"/><circle cx="376" cy="376" r="3"/>
+        </g>
+        <!-- Bold route -->
+        <path d="M136 376 L136 296 L296 296 L296 136 L376 136"
+              stroke="url(#h2g)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- Start -->
+        <circle cx="136" cy="376" r="16" fill="white"/>
+        <circle cx="136" cy="376" r="8" fill="#0080B0"/>
+        <!-- End: SPARK burst -->
+        <polygon points="376,76 388,118 428,132 388,146 376,188 364,146 324,132 364,118"
+                 fill="white" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="376" cy="132" r="10" fill="#00D4FF"/>
+        <circle cx="376" cy="132" r="5" fill="white" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M136 376 L136 296 L296 296 L296 136 L376 136" stroke="#00D4FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="136" cy="376" r="14" fill="white"/><circle cx="136" cy="376" r="7" fill="#0080B0"/>
+        <polygon points="376,76 388,118 428,132 388,146 376,188 364,146 324,132 364,118" fill="white"/>
+        <circle cx="376" cy="132" r="8" fill="#00D4FF"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">H2</div>
+      <div class="card-name">The Bright Route</div>
+      <div class="card-sub">Path that ends in a spark — the eureka destination</div>
+      <div class="card-desc">A clean navigator route that terminates in a spark burst at the destination. The journey leads to a moment of brilliance. Combines the purposeful path of the navigator with the spark's energy at the payoff. The story: complexity in, breakthrough out. Simple, bold, narrative.</div>
+    </div>
+  </div>
+
+  <!-- H3: The Bulb Route -->
+  <div class="card">
+    <div class="card-icon">
+      <svg viewBox="0 0 512 512" width="160" height="160">
+        <defs>
+          <linearGradient id="h3g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          <radialGradient id="h3r" cx="50%" cy="40%" r="30%"><stop offset="0%" stop-color="#00D4FF" stop-opacity="0.15"/><stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <circle cx="256" cy="220" r="120" fill="url(#h3r)"/>
+        <!-- Lightbulb outline as a route/path -->
+        <path d="M172 340
+                 C140 300, 128 260, 128 216
+                 C128 148, 184 88, 256 88
+                 C328 88, 384 148, 384 216
+                 C384 260, 372 300, 340 340"
+              stroke="url(#h3g)" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <!-- Base traces (horizontal) -->
+        <line x1="184" y1="360" x2="328" y2="360" stroke="url(#h3g)" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+        <line x1="200" y1="384" x2="312" y2="384" stroke="url(#h3g)" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+        <line x1="220" y1="406" x2="292" y2="406" stroke="url(#h3g)" stroke-width="6" stroke-linecap="round" opacity="0.25"/>
+        <!-- Circuit nodes along the bulb path -->
+        <circle cx="172" cy="340" r="10" fill="white"/>
+        <circle cx="340" cy="340" r="10" fill="white"/>
+        <circle cx="128" cy="216" r="10" fill="white"/>
+        <circle cx="384" cy="216" r="10" fill="white"/>
+        <circle cx="256" cy="88" r="14" fill="white"/>
+        <circle cx="256" cy="88" r="7" fill="#00D4FF"/>
+        <!-- Inner spark (small, centered) -->
+        <polygon points="256,176 264,204 288,210 266,220 268,246 256,228 244,246 246,220 224,210 248,204"
+                 fill="white" opacity="0.8"/>
+        <circle cx="256" cy="214" r="6" fill="#00D4FF" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="card-lockup">
+      <svg viewBox="0 0 512 512" width="32" height="32">
+        <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+        <path d="M172 340 C140 300, 128 260, 128 216 C128 148, 184 88, 256 88 C328 88, 384 148, 384 216 C384 260, 372 300, 340 340" stroke="#00D4FF" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <line x1="184" y1="360" x2="328" y2="360" stroke="#00D4FF" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="256" cy="88" r="12" fill="white"/><circle cx="256" cy="88" r="6" fill="#00D4FF"/>
+        <circle cx="128" cy="216" r="8" fill="white"/><circle cx="384" cy="216" r="8" fill="white"/>
+        <polygon points="256,176 264,204 288,210 266,220 268,246 256,228 244,246 246,220 224,210 248,204" fill="white" opacity="0.7"/>
+      </svg>
+      <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+    </div>
+    <div class="card-info">
+      <div class="card-number">H3</div>
+      <div class="card-name">The Bulb Route</div>
+      <div class="card-sub">Lightbulb drawn as a circuit trace</div>
+      <div class="card-desc">The lightbulb shape rendered as a circuit board trace — with nodes at the key structural points. A small spark filament glows inside. All three themes in one: the shape of an idea (eureka), drawn as a path (navigator), with energy at its core (spark). A true synthesis.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="domain">taylorsmart.ai</div>
+  <p>Refined Logo Concepts — Spark / Eureka / Navigator</p>
+</footer>
+
+</body>
+</html>

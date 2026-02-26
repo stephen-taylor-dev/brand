@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>taylorsmart.ai — Shield + TS Monogram Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary-950: #0B1121; --primary-900: #19214E; --primary-800: #263261; --primary-700: #2D3B6B;
+      --accent-500: #00D4FF; --accent-600: #00AADF; --accent-700: #0080B0;
+      --highlight-500: #FFC107;
+      --neutral-100: #F1F3F7; --neutral-200: #E2E5ED; --neutral-300: #CDD2DE; --neutral-400: #9BA3B8;
+      --neutral-500: #6B7492; --neutral-600: #515A74; --neutral-700: #3C4459; --neutral-800: #282E3F;
+      --neutral-900: #181C28; --neutral-950: #0D0F16;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--neutral-950); color: var(--neutral-100); -webkit-font-smoothing: antialiased; }
+
+    .header {
+      padding: 72px 60px 56px;
+      background: linear-gradient(135deg, var(--primary-950), var(--primary-900));
+      position: relative; overflow: hidden;
+    }
+    .header::before { content:''; position:absolute; top:-40%; right:-15%; width:500px; height:500px; background:radial-gradient(circle,rgba(0,212,255,0.06) 0%,transparent 70%); border-radius:50%; }
+    .header .label { font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:var(--accent-500); margin-bottom:12px; position:relative; }
+    .header h1 { font-size:44px; font-weight:800; color:white; letter-spacing:-2px; line-height:1.1; position:relative; }
+    .header p { margin-top:14px; font-size:17px; color:var(--neutral-400); max-width:580px; position:relative; line-height:1.6; }
+
+    .grid { padding: 48px 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 32px; }
+
+    .card { background: var(--neutral-900); border: 1px solid var(--neutral-800); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; }
+    .card:hover { border-color: var(--accent-700); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
+
+    .card-top { display: flex; gap: 0; }
+    .card-icon { background: var(--primary-950); padding: 36px; display: flex; align-items: center; justify-content: center; flex: 0 0 220px; border-right: 1px solid var(--neutral-800); }
+    .card-right { flex: 1; display: flex; flex-direction: column; }
+    .card-lockup { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--neutral-800); }
+    .card-lockup .wm { font-size: 20px; letter-spacing: -0.8px; white-space: nowrap; }
+    .card-lockup .b { font-weight: 800; color: white; }
+    .card-lockup .l { font-weight: 300; color: rgba(255,255,255,0.55); }
+    .card-lockup .c { font-weight: 700; color: var(--accent-500); }
+
+    .card-info { padding: 20px; flex: 1; }
+    .card-number { font-family: var(--font-mono); font-size: 10px; color: var(--accent-500); opacity: 0.6; margin-bottom: 4px; }
+    .card-name { font-size: 22px; font-weight: 800; color: white; letter-spacing: -0.5px; margin-bottom: 4px; }
+    .card-sub { font-size: 13px; color: var(--accent-600); margin-bottom: 12px; }
+    .card-desc { font-size: 13px; color: var(--neutral-400); line-height: 1.65; }
+    .card-traits { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .trait { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 5px; background: rgba(0,212,255,0.08); color: var(--accent-500); border: 1px solid rgba(0,212,255,0.15); }
+    .trait.gold { background: rgba(255,193,7,0.08); color: var(--highlight-500); border-color: rgba(255,193,7,0.15); }
+
+    .footer { padding: 48px 60px; text-align: center; border-top: 1px solid var(--neutral-800); }
+    .footer .domain { font-size: 18px; font-weight: 700; color: var(--accent-500); font-family: var(--font-mono); margin-bottom: 6px; }
+    .footer p { font-size: 13px; color: var(--neutral-500); }
+
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; padding: 32px 24px; } .card-top { flex-direction: column; } .card-icon { flex: none; border-right: none; border-bottom: 1px solid var(--neutral-800); } }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="label">Shield + Monogram</div>
+  <h1>The TS Crest</h1>
+  <p>A shield says trust, protection, authority. An intertwined TS monogram says identity. Together they say: "We've got this." Six approaches — from classic heraldic to cutting-edge geometric.</p>
+</header>
+
+<div class="grid">
+
+  <!-- ═══ 1: THE CREST — Classic shield, shared-stem TS ═══ -->
+  <div class="card">
+    <div class="card-top">
+      <div class="card-icon">
+        <svg viewBox="0 0 512 512" width="148" height="148">
+          <defs>
+            <linearGradient id="c1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          </defs>
+          <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+          <!-- Classic shield shape -->
+          <path d="M256 68 L420 128 L420 288 Q420 408 256 448 Q92 408 92 288 L92 128 Z"
+                fill="none" stroke="white" stroke-width="10" opacity="0.12"/>
+          <path d="M256 84 L404 140 L404 284 Q404 392 256 432 Q108 392 108 284 L108 140 Z"
+                fill="white" opacity="0.06"/>
+
+          <!-- TS monogram: shared vertical stem -->
+          <!-- T crossbar -->
+          <rect x="152" y="152" width="208" height="32" rx="4" fill="white"/>
+          <!-- Shared stem -->
+          <rect x="240" y="152" width="32" height="232" rx="4" fill="white"/>
+          <!-- S left bar (connects to stem from left) -->
+          <rect x="168" y="236" width="104" height="28" rx="4" fill="url(#c1g)"/>
+          <!-- S right bar (extends from stem to right) -->
+          <rect x="240" y="320" width="104" height="28" rx="4" fill="url(#c1g)"/>
+          <!-- S end caps (small verticals) -->
+          <rect x="168" y="184" width="28" height="80" rx="4" fill="url(#c1g)"/>
+          <rect x="316" y="264" width="28" height="84" rx="4" fill="url(#c1g)"/>
+        </svg>
+      </div>
+      <div class="card-right">
+        <div class="card-lockup">
+          <svg viewBox="0 0 512 512" width="32" height="32">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M256 84 L404 140 L404 284 Q404 392 256 432 Q108 392 108 284 L108 140 Z" fill="white" opacity="0.08"/>
+            <rect x="152" y="152" width="208" height="32" rx="4" fill="white"/>
+            <rect x="240" y="152" width="32" height="232" rx="4" fill="white"/>
+            <rect x="168" y="236" width="104" height="28" rx="4" fill="#00D4FF"/>
+            <rect x="240" y="320" width="104" height="28" rx="4" fill="#00D4FF"/>
+            <rect x="168" y="184" width="28" height="80" rx="4" fill="#00D4FF"/>
+            <rect x="316" y="264" width="28" height="84" rx="4" fill="#00D4FF"/>
+          </svg>
+          <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-number">SH-1</div>
+          <div class="card-name">The Crest</div>
+          <div class="card-sub">Shared stem — T and S are one structure</div>
+          <div class="card-desc">Classic heraldic shield outline. The T's vertical stem runs through the center and the S attaches to it — the S's horizontal bars extend left and right from the shared spine. The T is white, the S is cyan. They literally share the same backbone. Reads as "TS" immediately.</div>
+          <div class="card-traits">
+            <span class="trait">Unified</span>
+            <span class="trait">Heraldic</span>
+            <span class="trait gold">Clean Read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 2: THE AEGIS — Hex shield, overlapping bold letters ═══ -->
+  <div class="card">
+    <div class="card-top">
+      <div class="card-icon">
+        <svg viewBox="0 0 512 512" width="148" height="148">
+          <defs>
+            <linearGradient id="c2g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          </defs>
+          <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+          <!-- Hexagonal shield -->
+          <path d="M256 68 L416 148 L416 328 L256 444 L96 328 L96 148 Z"
+                fill="white" opacity="0.06" stroke="white" stroke-width="6" stroke-opacity="0.1"/>
+
+          <!-- Bold T (white, slightly left) -->
+          <rect x="136" y="148" width="196" height="36" rx="5" fill="white"/>
+          <rect x="216" y="148" width="36" height="248" rx="5" fill="white"/>
+
+          <!-- Bold geometric S (cyan, slightly right, overlapping) -->
+          <!-- Top bar -->
+          <rect x="212" y="164" width="148" height="30" rx="4" fill="url(#c2g)" opacity="0.85"/>
+          <!-- Top-left vertical -->
+          <rect x="212" y="164" width="30" height="88" rx="4" fill="url(#c2g)" opacity="0.85"/>
+          <!-- Middle bar -->
+          <rect x="212" y="248" width="148" height="30" rx="4" fill="url(#c2g)" opacity="0.85"/>
+          <!-- Bottom-right vertical -->
+          <rect x="330" y="248" width="30" height="88" rx="4" fill="url(#c2g)" opacity="0.85"/>
+          <!-- Bottom bar -->
+          <rect x="212" y="332" width="148" height="30" rx="4" fill="url(#c2g)" opacity="0.85"/>
+        </svg>
+      </div>
+      <div class="card-right">
+        <div class="card-lockup">
+          <svg viewBox="0 0 512 512" width="32" height="32">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M256 68 L416 148 L416 328 L256 444 L96 328 L96 148 Z" fill="white" opacity="0.06"/>
+            <rect x="136" y="148" width="196" height="36" rx="5" fill="white"/>
+            <rect x="216" y="148" width="36" height="248" rx="5" fill="white"/>
+            <rect x="212" y="164" width="148" height="30" rx="4" fill="#00D4FF" opacity="0.85"/>
+            <rect x="212" y="164" width="30" height="88" rx="4" fill="#00D4FF" opacity="0.85"/>
+            <rect x="212" y="248" width="148" height="30" rx="4" fill="#00D4FF" opacity="0.85"/>
+            <rect x="330" y="248" width="30" height="88" rx="4" fill="#00D4FF" opacity="0.85"/>
+            <rect x="212" y="332" width="148" height="30" rx="4" fill="#00D4FF" opacity="0.85"/>
+          </svg>
+          <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-number">SH-2</div>
+          <div class="card-name">The Aegis</div>
+          <div class="card-sub">Block letters — T behind, geometric S in front</div>
+          <div class="card-desc">Hexagonal shield shape for a tech/cyber feel. A bold white T sits behind a geometric, angular S made entirely of straight lines and right angles — no curves at all. The S overlaps the T, creating depth. The angular S feels like a circuit board trace. Both letters are heavy and confident.</div>
+          <div class="card-traits">
+            <span class="trait">Angular</span>
+            <span class="trait">Tech</span>
+            <span class="trait gold">Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 3: THE GUARDIAN — Modern shield, ligature TS ═══ -->
+  <div class="card">
+    <div class="card-top">
+      <div class="card-icon">
+        <svg viewBox="0 0 512 512" width="148" height="148">
+          <defs>
+            <linearGradient id="c3g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+            <linearGradient id="c3s" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.03"/></linearGradient>
+          </defs>
+          <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+          <!-- Rounded-top pointed shield (filled) -->
+          <path d="M152 80 L360 80 Q420 80 420 140 L420 296 L256 440 L92 296 L92 140 Q92 80 152 80 Z"
+                fill="url(#c3s)" stroke="white" stroke-width="4" stroke-opacity="0.15"/>
+
+          <!-- TS as a continuous connected ligature -->
+          <!-- T crossbar flowing into S top -->
+          <path d="M148 168 L324 168 C356 168 368 184 368 204 C368 228 348 244 316 244 L208 244"
+                stroke="white" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- T stem -->
+          <line x1="236" y1="168" x2="236" y2="392" stroke="white" stroke-width="30" stroke-linecap="round"/>
+          <!-- S bottom: from middle bar continuing down and left -->
+          <path d="M208 244 C172 244 148 264 148 292 C148 320 172 340 208 340 L324 340"
+                stroke="url(#c3g)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="card-right">
+        <div class="card-lockup">
+          <svg viewBox="0 0 512 512" width="32" height="32">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M152 80 L360 80 Q420 80 420 140 L420 296 L256 440 L92 296 L92 140 Q92 80 152 80 Z" fill="white" opacity="0.06"/>
+            <path d="M148 168 L324 168 C356 168 368 184 368 204 C368 228 348 244 316 244 L208 244" stroke="white" stroke-width="30" stroke-linecap="round" fill="none"/>
+            <line x1="236" y1="168" x2="236" y2="392" stroke="white" stroke-width="30" stroke-linecap="round"/>
+            <path d="M208 244 C172 244 148 264 148 292 C148 320 172 340 208 340 L324 340" stroke="#00D4FF" stroke-width="30" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-number">SH-3</div>
+          <div class="card-name">The Guardian</div>
+          <div class="card-sub">Flowing ligature — T and S share one stroke</div>
+          <div class="card-desc">Modern rounded shield. The T crossbar flows seamlessly into the top half of the S — they share the same continuous stroke. The T stem drops down through the center. The S bottom half completes in cyan. It reads as one connected TS letterform, not two separate letters. Elegant, premium, fluid.</div>
+          <div class="card-traits">
+            <span class="trait">Fluid</span>
+            <span class="trait">Premium</span>
+            <span class="trait gold">Elegant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 4: THE SENTINEL — Filled shield, negative space TS ═══ -->
+  <div class="card">
+    <div class="card-top">
+      <div class="card-icon">
+        <svg viewBox="0 0 512 512" width="148" height="148">
+          <defs>
+            <linearGradient id="c4g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+            <mask id="c4mask">
+              <path d="M256 68 L420 128 L420 296 Q420 408 256 444 Q92 408 92 296 L92 128 Z" fill="white"/>
+              <!-- Cut out T -->
+              <rect x="152" y="148" width="208" height="32" rx="4" fill="black"/>
+              <rect x="240" y="148" width="32" height="240" rx="4" fill="black"/>
+              <!-- Cut out geometric S -->
+              <rect x="196" y="196" width="28" height="72" rx="4" fill="black"/>
+              <rect x="196" y="236" width="108" height="28" rx="4" fill="black"/>
+              <rect x="288" y="268" width="28" height="72" rx="4" fill="black"/>
+              <rect x="196" y="312" width="120" height="28" rx="4" fill="black"/>
+              <rect x="196" y="168" width="120" height="28" rx="4" fill="black"/>
+            </mask>
+          </defs>
+          <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+          <!-- Filled shield with TS cut out -->
+          <path d="M256 68 L420 128 L420 296 Q420 408 256 444 Q92 408 92 296 L92 128 Z"
+                fill="url(#c4g)" mask="url(#c4mask)"/>
+          <!-- Thin shield outline for definition -->
+          <path d="M256 68 L420 128 L420 296 Q420 408 256 444 Q92 408 92 296 L92 128 Z"
+                fill="none" stroke="white" stroke-width="3" opacity="0.15"/>
+        </svg>
+      </div>
+      <div class="card-right">
+        <div class="card-lockup">
+          <svg viewBox="0 0 512 512" width="32" height="32">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M256 68 L420 128 L420 296 Q420 408 256 444 Q92 408 92 296 L92 128 Z" fill="#00D4FF"/>
+            <!-- Simplified cutout shapes rendered as dark rects -->
+            <rect x="152" y="148" width="208" height="32" rx="4" fill="#0B1121"/>
+            <rect x="240" y="148" width="32" height="240" rx="4" fill="#0B1121"/>
+            <rect x="196" y="168" width="120" height="28" rx="4" fill="#0B1121"/>
+            <rect x="196" y="196" width="28" height="72" rx="4" fill="#0B1121"/>
+            <rect x="196" y="236" width="108" height="28" rx="4" fill="#0B1121"/>
+            <rect x="288" y="268" width="28" height="72" rx="4" fill="#0B1121"/>
+            <rect x="196" y="312" width="120" height="28" rx="4" fill="#0B1121"/>
+          </svg>
+          <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-number">SH-4</div>
+          <div class="card-name">The Sentinel</div>
+          <div class="card-sub">Negative space — TS carved from a solid shield</div>
+          <div class="card-desc">A solid cyan shield with the TS monogram carved out as negative space — the dark background shows through the letter shapes. The T and geometric S overlap and merge into a single cut-through pattern. Bold, dense, premium. The shield IS the logo — the letters are what's missing from it. Inverted thinking.</div>
+          <div class="card-traits">
+            <span class="trait">Negative Space</span>
+            <span class="trait">Dense</span>
+            <span class="trait gold">Unique</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 5: THE EMBLEM — Minimal outline shield, centered TS ═══ -->
+  <div class="card">
+    <div class="card-top">
+      <div class="card-icon">
+        <svg viewBox="0 0 512 512" width="148" height="148">
+          <defs>
+            <linearGradient id="c5g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          </defs>
+          <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+          <!-- Clean minimal shield outline -->
+          <path d="M256 76 L408 132 L408 288 Q408 396 256 436 Q104 396 104 288 L104 132 Z"
+                fill="none" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+
+          <!-- T — large, bold, centered -->
+          <rect x="156" y="156" width="200" height="28" rx="3" fill="white"/>
+          <rect x="242" y="156" width="28" height="224" rx="3" fill="white"/>
+
+          <!-- S overlaid — same geometric angular style but ONLY the strokes, creating an interweave -->
+          <!-- S top horizontal (passes BEHIND the T crossbar — positioned just below) -->
+          <rect x="180" y="192" width="120" height="24" rx="3" fill="url(#c5g)"/>
+          <!-- S left connector (goes DOWN from S-top) -->
+          <rect x="180" y="192" width="24" height="68" rx="3" fill="url(#c5g)"/>
+          <!-- S middle (passes IN FRONT of T stem) -->
+          <rect x="180" y="256" width="152" height="24" rx="3" fill="url(#c5g)"/>
+          <!-- S right connector (goes DOWN from S-middle) -->
+          <rect x="308" y="256" width="24" height="68" rx="3" fill="url(#c5g)"/>
+          <!-- S bottom horizontal -->
+          <rect x="180" y="320" width="152" height="24" rx="3" fill="url(#c5g)"/>
+
+          <!-- Re-draw T stem segment OVER the S middle bar to create interweave -->
+          <rect x="242" y="244" width="28" height="10" rx="2" fill="white"/>
+          <rect x="242" y="282" width="28" height="10" rx="2" fill="white"/>
+        </svg>
+      </div>
+      <div class="card-right">
+        <div class="card-lockup">
+          <svg viewBox="0 0 512 512" width="32" height="32">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M256 76 L408 132 L408 288 Q408 396 256 436 Q104 396 104 288 L104 132 Z" fill="none" stroke="white" stroke-width="8"/>
+            <rect x="156" y="156" width="200" height="28" rx="3" fill="white"/>
+            <rect x="242" y="156" width="28" height="224" rx="3" fill="white"/>
+            <rect x="180" y="192" width="120" height="24" rx="3" fill="#00D4FF"/>
+            <rect x="180" y="192" width="24" height="68" rx="3" fill="#00D4FF"/>
+            <rect x="180" y="256" width="152" height="24" rx="3" fill="#00D4FF"/>
+            <rect x="308" y="256" width="24" height="68" rx="3" fill="#00D4FF"/>
+            <rect x="180" y="320" width="152" height="24" rx="3" fill="#00D4FF"/>
+          </svg>
+          <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-number">SH-5</div>
+          <div class="card-name">The Emblem</div>
+          <div class="card-sub">Interwoven — T and S weave over/under each other</div>
+          <div class="card-desc">Thin shield outline, all focus on the monogram. The T and S physically interweave — the T stem passes over and under the S bars, like a Celtic knot or woven fabric. Creates a sense of two things working together as one. The most literally "intertwined" concept. Sophisticated, detailed, craft-quality.</div>
+          <div class="card-traits">
+            <span class="trait">Interwoven</span>
+            <span class="trait">Crafted</span>
+            <span class="trait gold">Sophisticated</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 6: THE BASTION — Heavy filled shield, simple bold TS ═══ -->
+  <div class="card">
+    <div class="card-top">
+      <div class="card-icon">
+        <svg viewBox="0 0 512 512" width="148" height="148">
+          <defs>
+            <linearGradient id="c6g" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#263261"/><stop offset="100%" stop-color="#0B1121"/>
+            </linearGradient>
+            <linearGradient id="c6a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0080B0"/></linearGradient>
+          </defs>
+          <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+          <!-- Heavy filled shield -->
+          <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z"
+                fill="url(#c6g)" stroke="white" stroke-width="4" stroke-opacity="0.2"/>
+
+          <!-- Dividing line: shield split vertically -->
+          <line x1="256" y1="100" x2="256" y2="420" stroke="white" stroke-width="2" opacity="0.1"/>
+
+          <!-- Left half: Bold T -->
+          <text x="148" y="320" font-family="Inter, sans-serif" font-size="220" font-weight="900" fill="white" opacity="0.9">T</text>
+
+          <!-- Right half: Bold S in cyan -->
+          <text x="244" y="320" font-family="Inter, sans-serif" font-size="220" font-weight="900" fill="url(#c6a)" opacity="0.85">S</text>
+
+          <!-- Subtle shield top accent -->
+          <path d="M256 72 L416 132 L416 152 L256 92 L96 152 L96 132 Z" fill="white" opacity="0.04"/>
+        </svg>
+      </div>
+      <div class="card-right">
+        <div class="card-lockup">
+          <svg viewBox="0 0 512 512" width="32" height="32">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <path d="M256 72 L416 132 L416 296 Q416 404 256 440 Q96 404 96 296 L96 132 Z" fill="#19214E"/>
+            <text x="148" y="320" font-family="Inter, sans-serif" font-size="220" font-weight="900" fill="white">T</text>
+            <text x="244" y="320" font-family="Inter, sans-serif" font-size="220" font-weight="900" fill="#00D4FF">S</text>
+          </svg>
+          <div class="wm"><span class="b">taylor</span><span class="l">smart</span><span class="c">.ai</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-number">SH-6</div>
+          <div class="card-name">The Bastion</div>
+          <div class="card-sub">Split shield — T left, S right, big and bold</div>
+          <div class="card-desc">The simplest, most direct approach. A heavy filled shield with massive T and S letters side by side — the T in white, the S in cyan. They overlap naturally where they meet at the center. A faint vertical divider suggests the shield is split like a traditional coat of arms. Massive presence, zero ambiguity. Reads "TS" from across a room.</div>
+          <div class="card-traits">
+            <span class="trait">Direct</span>
+            <span class="trait">Massive</span>
+            <span class="trait gold">Readable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="domain">taylorsmart.ai</div>
+  <p>Shield + TS Monogram Exploration — 6 Concepts</p>
+</footer>
+
+</body>
+</html>
