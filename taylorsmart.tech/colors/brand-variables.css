@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════════════════
+   Taylor Smart LLC — CSS Custom Properties
+   taylorsmart.tech
+
+   Import this file into any project to use the brand
+   color system with CSS custom properties.
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Primary: Midnight Navy ─── */
+  --ts-primary-50: #E8EAF0;
+  --ts-primary-100: #C5CAD9;
+  --ts-primary-200: #9EA6BF;
+  --ts-primary-300: #7782A5;
+  --ts-primary-400: #596791;
+  --ts-primary-500: #3B4C7E;
+  --ts-primary-600: #354576;
+  --ts-primary-700: #2D3B6B;
+  --ts-primary-800: #263261;
+  --ts-primary-900: #19214E;
+  --ts-primary-950: #0B1121;
+
+  /* ─── Accent: Electric Cyan ─── */
+  --ts-accent-50: #E0FBFF;
+  --ts-accent-100: #B3F5FF;
+  --ts-accent-200: #80EEFF;
+  --ts-accent-300: #4DE7FF;
+  --ts-accent-400: #26E1FF;
+  --ts-accent-500: #00D4FF;
+  --ts-accent-600: #00AADF;
+  --ts-accent-700: #0080B0;
+  --ts-accent-800: #005E82;
+  --ts-accent-900: #003D55;
+  --ts-accent-950: #001F2B;
+
+  /* ─── Highlight: Ember Gold ─── */
+  --ts-highlight-50: #FFF8E6;
+  --ts-highlight-100: #FFEDB3;
+  --ts-highlight-200: #FFE080;
+  --ts-highlight-300: #FFD44D;
+  --ts-highlight-400: #FFCA26;
+  --ts-highlight-500: #FFC107;
+  --ts-highlight-600: #DFAA00;
+  --ts-highlight-700: #B08700;
+  --ts-highlight-800: #826400;
+  --ts-highlight-900: #554100;
+  --ts-highlight-950: #2B2100;
+
+  /* ─── Neutral: Slate ─── */
+  --ts-neutral-50: #F8F9FB;
+  --ts-neutral-100: #F1F3F7;
+  --ts-neutral-200: #E2E5ED;
+  --ts-neutral-300: #CDD2DE;
+  --ts-neutral-400: #9BA3B8;
+  --ts-neutral-500: #6B7492;
+  --ts-neutral-600: #515A74;
+  --ts-neutral-700: #3C4459;
+  --ts-neutral-800: #282E3F;
+  --ts-neutral-900: #181C28;
+  --ts-neutral-950: #0D0F16;
+
+  /* ─── Semantic ─── */
+  --ts-success: #10B981;
+  --ts-warning: #F59E0B;
+  --ts-error: #EF4444;
+  --ts-info: #00D4FF;
+
+  /* ─── Gradients ─── */
+  --ts-gradient-accent: linear-gradient(135deg, #00D4FF 0%, #0080B0 100%);
+  --ts-gradient-dark: linear-gradient(135deg, #0B1121 0%, #19214E 50%, #263261 100%);
+  --ts-gradient-highlight: linear-gradient(135deg, #FFC107 0%, #DFAA00 100%);
+  --ts-gradient-hero: linear-gradient(135deg, #0B1121 0%, #19214E 100%);
+
+  /* ─── Shadows ─── */
+  --ts-shadow-sm: 0 2px 8px rgba(11, 17, 33, 0.12);
+  --ts-shadow-md: 0 4px 16px rgba(11, 17, 33, 0.16);
+  --ts-shadow-lg: 0 8px 32px rgba(11, 17, 33, 0.24);
+  --ts-shadow-xl: 0 16px 48px rgba(11, 17, 33, 0.32);
+  --ts-shadow-glow-cyan: 0 8px 24px rgba(0, 212, 255, 0.25);
+  --ts-shadow-glow-gold: 0 8px 24px rgba(255, 193, 7, 0.25);
+
+  /* ─── Border Radius ─── */
+  --ts-radius-sm: 6px;
+  --ts-radius-md: 10px;
+  --ts-radius-lg: 16px;
+  --ts-radius-xl: 24px;
+  --ts-radius-full: 9999px;
+}

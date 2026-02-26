@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 80" width="620" height="80">
+  <!-- Wordmark: taylorsmart.tech — white text for dark backgrounds -->
+  <g>
+    <text x="0" y="58" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="50" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">
+      taylor</text>
+    <text x="230" y="58" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="50" font-weight="300" fill="rgba(255,255,255,0.7)" letter-spacing="-1.5">
+      smart</text>
+    <text x="415" y="58" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="50" font-weight="700" fill="#00D4FF" letter-spacing="-1.5">
+      .tech</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 80" width="600" height="80">
+  <!-- Wordmark only: taylorsmart.tech -->
+  <text x="0" y="58" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="52" font-weight="800" fill="#0B1121" letter-spacing="-1.5">
+    taylor</text>
+  <text x="237" y="58" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="52" font-weight="300" fill="#0B1121" letter-spacing="-1.5">
+    smart</text>
+  <text x="428" y="58" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="52" font-weight="700" fill="#00D4FF" letter-spacing="-1.5">
+    .tech</text>
+</svg>

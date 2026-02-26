@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>taylorsmart.tech — Brand Identity System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary-50: #E8EAF0;
+      --primary-100: #C5CAD9;
+      --primary-200: #9EA6BF;
+      --primary-300: #7782A5;
+      --primary-400: #596791;
+      --primary-500: #3B4C7E;
+      --primary-600: #354576;
+      --primary-700: #2D3B6B;
+      --primary-800: #263261;
+      --primary-900: #19214E;
+      --primary-950: #0B1121;
+      --accent-50: #E0FBFF;
+      --accent-100: #B3F5FF;
+      --accent-200: #80EEFF;
+      --accent-300: #4DE7FF;
+      --accent-400: #26E1FF;
+      --accent-500: #00D4FF;
+      --accent-600: #00AADF;
+      --accent-700: #0080B0;
+      --accent-800: #005E82;
+      --accent-900: #003D55;
+      --accent-950: #001F2B;
+      --highlight-50: #FFF8E6;
+      --highlight-100: #FFEDB3;
+      --highlight-200: #FFE080;
+      --highlight-300: #FFD44D;
+      --highlight-400: #FFCA26;
+      --highlight-500: #FFC107;
+      --highlight-600: #DFAA00;
+      --highlight-700: #B08700;
+      --highlight-800: #826400;
+      --highlight-900: #554100;
+      --neutral-50: #F8F9FB;
+      --neutral-100: #F1F3F7;
+      --neutral-200: #E2E5ED;
+      --neutral-300: #CDD2DE;
+      --neutral-400: #9BA3B8;
+      --neutral-500: #6B7492;
+      --neutral-600: #515A74;
+      --neutral-700: #3C4459;
+      --neutral-800: #282E3F;
+      --neutral-900: #181C28;
+      --neutral-950: #0D0F16;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--neutral-950);
+      color: var(--neutral-100);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .brand-header {
+      background: linear-gradient(135deg, var(--primary-950) 0%, var(--primary-900) 50%, var(--primary-800) 100%);
+      padding: 80px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .brand-header h1 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--accent-500);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .brand-header .hero-name {
+      font-size: 60px;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+    .brand-header .hero-name .bold { font-weight: 800; color: white; }
+    .brand-header .hero-name .light { font-weight: 300; color: var(--neutral-300); }
+    .brand-header .hero-name .cyan { font-weight: 700; color: var(--accent-500); }
+    .brand-header p {
+      font-size: 18px;
+      color: var(--neutral-400);
+      max-width: 600px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section {
+      padding: 80px 60px;
+      border-bottom: 1px solid var(--neutral-800);
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent-500);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 36px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .section-desc {
+      font-size: 16px;
+      color: var(--neutral-400);
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    /* Logo section */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+    .logo-card {
+      border-radius: 16px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 240px;
+      position: relative;
+    }
+    .logo-card.dark { background: var(--primary-950); border: 1px solid var(--primary-800); }
+    .logo-card.light { background: #FFFFFF; border: 1px solid var(--neutral-200); }
+    .logo-card.gradient { background: linear-gradient(135deg, var(--primary-950) 0%, var(--primary-800) 100%); border: 1px solid var(--primary-700); }
+    .logo-card-label {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+    .logo-card.dark .logo-card-label { color: white; }
+    .logo-card.light .logo-card-label { color: var(--neutral-600); }
+
+    /* SVG helper for inline icon */
+    .monogram-icon { display: inline-block; }
+
+    /* Color palette */
+    .palette-group { margin-bottom: 48px; }
+    .palette-group-title { font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px; }
+    .palette-group-desc { font-size: 14px; color: var(--neutral-400); margin-bottom: 20px; }
+    .color-row {
+      display: flex;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 80px;
+    }
+    .color-swatch {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      padding: 8px 10px;
+      font-size: 10px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      transition: flex 0.3s ease;
+      cursor: default;
+      position: relative;
+    }
+    .color-swatch:hover { flex: 2; }
+    .color-swatch .shade { opacity: 0.7; }
+    .color-swatch.lt { color: white; }
+    .color-swatch.dt { color: var(--neutral-900); }
+    .color-swatch .hex {
+      font-size: 11px;
+      opacity: 0;
+      transition: opacity 0.2s;
+      position: absolute;
+      top: 8px;
+      left: 10px;
+    }
+    .color-swatch:hover .hex { opacity: 0.8; }
+
+    .main-colors {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .main-color-card { border-radius: 16px; overflow: hidden; }
+    .main-color-preview {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-color-info {
+      padding: 20px;
+      background: var(--neutral-900);
+      border: 1px solid var(--neutral-800);
+      border-top: none;
+      border-radius: 0 0 16px 16px;
+    }
+    .main-color-name { font-size: 18px; font-weight: 700; color: white; margin-bottom: 4px; }
+    .main-color-hex { font-family: var(--font-mono); font-size: 14px; color: var(--accent-500); margin-bottom: 8px; }
+    .main-color-use { font-size: 13px; color: var(--neutral-400); line-height: 1.5; }
+
+    /* Typography */
+    .type-scale { display: flex; flex-direction: column; gap: 32px; }
+    .type-sample { border-bottom: 1px solid var(--neutral-800); padding-bottom: 32px; }
+    .type-sample:last-child { border-bottom: none; }
+    .type-meta { display: flex; gap: 16px; margin-bottom: 12px; align-items: center; }
+    .type-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-500);
+      background: rgba(0, 212, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .type-spec { font-size: 12px; font-family: var(--font-mono); color: var(--neutral-500); }
+    .type-display { color: white; }
+
+    /* Buttons */
+    .button-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary { background: var(--accent-500); color: var(--primary-950); }
+    .btn-primary:hover { background: var(--accent-400); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,212,255,0.25); }
+    .btn-secondary { background: transparent; color: white; border: 2px solid var(--neutral-600); }
+    .btn-secondary:hover { border-color: var(--accent-500); color: var(--accent-500); }
+    .btn-highlight { background: var(--highlight-500); color: var(--primary-950); }
+    .btn-highlight:hover { background: var(--highlight-400); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,193,7,0.25); }
+    .btn-dark { background: var(--primary-950); color: white; border: 1px solid var(--primary-800); }
+    .btn-dark:hover { border-color: var(--accent-500); }
+    .btn-ghost { background: rgba(0,212,255,0.08); color: var(--accent-500); border: 1px solid rgba(0,212,255,0.2); }
+    .btn-ghost:hover { background: rgba(0,212,255,0.15); border-color: var(--accent-500); }
+
+    /* Service cards */
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .service-card {
+      background: var(--neutral-900);
+      border: 1px solid var(--neutral-800);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+    .service-card:hover { border-color: var(--accent-700); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
+    .service-card-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px; font-size: 22px;
+    }
+    .service-card-icon.cyan { background: rgba(0,212,255,0.12); }
+    .service-card-icon.gold { background: rgba(255,193,7,0.12); }
+    .service-card h4 { font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px; }
+    .service-card p { font-size: 14px; color: var(--neutral-400); line-height: 1.6; }
+
+    /* Voice cards */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .voice-card {
+      background: var(--neutral-900);
+      border: 1px solid var(--neutral-800);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .voice-card .icon { font-size: 32px; margin-bottom: 12px; }
+    .voice-card h4 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 6px; }
+    .voice-card p { font-size: 13px; color: var(--neutral-400); line-height: 1.5; }
+
+    /* Usage do/don't */
+    .usage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .usage-card { border-radius: 16px; padding: 32px; border: 1px solid var(--neutral-800); }
+    .usage-card.do { background: rgba(16,185,129,0.05); border-color: rgba(16,185,129,0.2); }
+    .usage-card.dont { background: rgba(239,68,68,0.05); border-color: rgba(239,68,68,0.2); }
+    .usage-card h4 { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+    .usage-card.do h4 { color: #10B981; }
+    .usage-card.dont h4 { color: #EF4444; }
+    .usage-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .usage-card li { font-size: 14px; color: var(--neutral-300); padding-left: 24px; position: relative; }
+    .usage-card.do li::before { content: '\2713'; position: absolute; left: 0; color: #10B981; font-weight: 700; }
+    .usage-card.dont li::before { content: '\2717'; position: absolute; left: 0; color: #EF4444; font-weight: 700; }
+
+    /* Footer */
+    .brand-footer {
+      padding: 60px;
+      text-align: center;
+      background: var(--primary-950);
+    }
+    .brand-footer p { font-size: 14px; color: var(--neutral-500); }
+    .brand-footer .domain { font-size: 20px; font-weight: 700; color: var(--accent-500); font-family: var(--font-mono); margin-bottom: 8px; }
+
+    @media (max-width: 768px) {
+      .brand-header, .section { padding: 48px 24px; }
+      .brand-header .hero-name { font-size: 36px; }
+      .main-colors, .usage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="brand-header">
+    <h1>Brand Identity System</h1>
+    <div class="hero-name">
+      <span class="bold">taylor</span><span class="light">smart</span><span class="cyan">.tech</span>
+    </div>
+    <p>Complete brand identity for Taylor Smart LLC — a cutting-edge technology services company based in Sugarcreek, Ohio.</p>
+  </header>
+
+  <!-- ═══ 01 — LOGO SYSTEM ═══ -->
+  <section class="section">
+    <div class="section-label">01 — Logo System</div>
+    <h2 class="section-title">Logo System</h2>
+    <p class="section-desc">The taylorsmart.tech logo is the wordmark itself — the brand name rendered with deliberate weight contrast. For icon-only contexts, a lowercase "ts" monogram mirrors the wordmark's weight contrast: "t" in ExtraBold, "s" in Light.</p>
+
+    <div class="logo-grid">
+      <!-- Dark monogram on light card -->
+      <div class="logo-card light">
+        <svg viewBox="0 0 512 512" width="180" height="180">
+          <rect x="16" y="16" width="480" height="480" rx="96" ry="96" fill="#0B1121"/>
+          <text x="108" y="368" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="320" font-weight="800" fill="#FFFFFF" letter-spacing="-12">t</text>
+          <text x="280" y="368" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="320" font-weight="300" fill="#FFFFFF" letter-spacing="-12">s</text>
+        </svg>
+        <span class="logo-card-label">ts Monogram — Dark</span>
+      </div>
+
+      <!-- Light monogram on dark card -->
+      <div class="logo-card dark">
+        <svg viewBox="0 0 512 512" width="180" height="180">
+          <rect x="16" y="16" width="480" height="480" rx="96" ry="96" fill="#F8F9FB"/>
+          <text x="108" y="368" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="320" font-weight="800" fill="#0B1121" letter-spacing="-12">t</text>
+          <text x="280" y="368" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="320" font-weight="300" fill="#0B1121" letter-spacing="-12">s</text>
+        </svg>
+        <span class="logo-card-label">ts Monogram — Light</span>
+      </div>
+
+      <!-- Full logo on dark -->
+      <div class="logo-card gradient" style="grid-column: 1 / -1;">
+        <div>
+          <div style="font-size: 48px; letter-spacing: -2px; line-height: 1;">
+            <span style="font-weight: 800; color: white;">taylor</span><span style="font-weight: 300; color: rgba(255,255,255,0.65);">smart</span><span style="font-weight: 700; color: #00D4FF;">.tech</span>
+          </div>
+        </div>
+        <span class="logo-card-label" style="color: rgba(255,255,255,0.4);">Full Logo — Dark Background</span>
+      </div>
+
+      <!-- Full logo on light -->
+      <div class="logo-card light" style="grid-column: 1 / -1;">
+        <div>
+          <div style="font-size: 48px; letter-spacing: -2px; line-height: 1;">
+            <span style="font-weight: 800; color: #0B1121;">taylor</span><span style="font-weight: 300; color: #515A74;">smart</span><span style="font-weight: 700; color: #00AADF;">.tech</span>
+          </div>
+        </div>
+        <span class="logo-card-label">Full Logo — Light Background</span>
+      </div>
+
+      <!-- Wordmark only -->
+      <div class="logo-card dark" style="grid-column: 1 / -1; min-height: 140px;">
+        <div style="font-size: 48px; letter-spacing: -2px;">
+          <span style="font-weight: 800; color: white;">taylor</span><span style="font-weight: 300; color: rgba(255,255,255,0.65);">smart</span><span style="font-weight: 700; color: #00D4FF;">.tech</span>
+        </div>
+        <span class="logo-card-label">Wordmark Only</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02 — COLOR PALETTE ═══ -->
+  <section class="section">
+    <div class="section-label">02 — Color Palette</div>
+    <h2 class="section-title">Brand Colors</h2>
+    <p class="section-desc">A three-pillar color system: Midnight Navy for authority and trust, Electric Cyan for cutting-edge technology, and Ember Gold for creativity and human warmth.</p>
+
+    <div class="main-colors">
+      <div class="main-color-card">
+        <div class="main-color-preview" style="background: #0B1121;">
+          <span style="font-size: 48px; font-weight: 800; color: white; opacity: 0.15;">Aa</span>
+        </div>
+        <div class="main-color-info">
+          <div class="main-color-name">Midnight Navy</div>
+          <div class="main-color-hex">#0B1121</div>
+          <div class="main-color-use">Primary backgrounds, headers, hero sections. Conveys intelligence and authority.</div>
+        </div>
+      </div>
+      <div class="main-color-card">
+        <div class="main-color-preview" style="background: linear-gradient(135deg, #00D4FF, #0080B0);">
+          <span style="font-size: 48px; font-weight: 800; color: white; opacity: 0.3;">Aa</span>
+        </div>
+        <div class="main-color-info">
+          <div class="main-color-name">Electric Cyan</div>
+          <div class="main-color-hex">#00D4FF</div>
+          <div class="main-color-use">CTAs, links, highlights, the ".tech" in the wordmark. Energetic and innovative.</div>
+        </div>
+      </div>
+      <div class="main-color-card">
+        <div class="main-color-preview" style="background: linear-gradient(135deg, #FFC107, #DFAA00);">
+          <span style="font-size: 48px; font-weight: 800; color: white; opacity: 0.3;">Aa</span>
+        </div>
+        <div class="main-color-info">
+          <div class="main-color-name">Ember Gold</div>
+          <div class="main-color-hex">#FFC107</div>
+          <div class="main-color-use">Premium highlights, workshop branding, emphasis. Use sparingly for maximum impact.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-group-title">Primary — Midnight Navy</div>
+      <div class="palette-group-desc">The anchor of the brand. Deep, authoritative, trustworthy.</div>
+      <div class="color-row">
+        <div class="color-swatch dt" style="background:#E8EAF0;"><span class="shade">50</span><span class="hex">#E8EAF0</span></div>
+        <div class="color-swatch dt" style="background:#C5CAD9;"><span class="shade">100</span><span class="hex">#C5CAD9</span></div>
+        <div class="color-swatch dt" style="background:#9EA6BF;"><span class="shade">200</span><span class="hex">#9EA6BF</span></div>
+        <div class="color-swatch lt" style="background:#7782A5;"><span class="shade">300</span><span class="hex">#7782A5</span></div>
+        <div class="color-swatch lt" style="background:#596791;"><span class="shade">400</span><span class="hex">#596791</span></div>
+        <div class="color-swatch lt" style="background:#3B4C7E;"><span class="shade">500</span><span class="hex">#3B4C7E</span></div>
+        <div class="color-swatch lt" style="background:#354576;"><span class="shade">600</span><span class="hex">#354576</span></div>
+        <div class="color-swatch lt" style="background:#2D3B6B;"><span class="shade">700</span><span class="hex">#2D3B6B</span></div>
+        <div class="color-swatch lt" style="background:#263261;"><span class="shade">800</span><span class="hex">#263261</span></div>
+        <div class="color-swatch lt" style="background:#19214E;"><span class="shade">900</span><span class="hex">#19214E</span></div>
+        <div class="color-swatch lt" style="background:#0B1121;"><span class="shade">950</span><span class="hex">#0B1121</span></div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-group-title">Accent — Electric Cyan</div>
+      <div class="palette-group-desc">The energy of innovation. Cutting-edge and dynamic.</div>
+      <div class="color-row">
+        <div class="color-swatch dt" style="background:#E0FBFF;"><span class="shade">50</span><span class="hex">#E0FBFF</span></div>
+        <div class="color-swatch dt" style="background:#B3F5FF;"><span class="shade">100</span><span class="hex">#B3F5FF</span></div>
+        <div class="color-swatch dt" style="background:#80EEFF;"><span class="shade">200</span><span class="hex">#80EEFF</span></div>
+        <div class="color-swatch dt" style="background:#4DE7FF;"><span class="shade">300</span><span class="hex">#4DE7FF</span></div>
+        <div class="color-swatch dt" style="background:#26E1FF;"><span class="shade">400</span><span class="hex">#26E1FF</span></div>
+        <div class="color-swatch dt" style="background:#00D4FF;"><span class="shade">500</span><span class="hex">#00D4FF</span></div>
+        <div class="color-swatch lt" style="background:#00AADF;"><span class="shade">600</span><span class="hex">#00AADF</span></div>
+        <div class="color-swatch lt" style="background:#0080B0;"><span class="shade">700</span><span class="hex">#0080B0</span></div>
+        <div class="color-swatch lt" style="background:#005E82;"><span class="shade">800</span><span class="hex">#005E82</span></div>
+        <div class="color-swatch lt" style="background:#003D55;"><span class="shade">900</span><span class="hex">#003D55</span></div>
+        <div class="color-swatch lt" style="background:#001F2B;"><span class="shade">950</span><span class="hex">#001F2B</span></div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-group-title">Highlight — Ember Gold</div>
+      <div class="palette-group-desc">Warmth, creativity, enlightenment. Use for premium moments.</div>
+      <div class="color-row">
+        <div class="color-swatch dt" style="background:#FFF8E6;"><span class="shade">50</span><span class="hex">#FFF8E6</span></div>
+        <div class="color-swatch dt" style="background:#FFEDB3;"><span class="shade">100</span><span class="hex">#FFEDB3</span></div>
+        <div class="color-swatch dt" style="background:#FFE080;"><span class="shade">200</span><span class="hex">#FFE080</span></div>
+        <div class="color-swatch dt" style="background:#FFD44D;"><span class="shade">300</span><span class="hex">#FFD44D</span></div>
+        <div class="color-swatch dt" style="background:#FFCA26;"><span class="shade">400</span><span class="hex">#FFCA26</span></div>
+        <div class="color-swatch dt" style="background:#FFC107;"><span class="shade">500</span><span class="hex">#FFC107</span></div>
+        <div class="color-swatch dt" style="background:#DFAA00;"><span class="shade">600</span><span class="hex">#DFAA00</span></div>
+        <div class="color-swatch lt" style="background:#B08700;"><span class="shade">700</span><span class="hex">#B08700</span></div>
+        <div class="color-swatch lt" style="background:#826400;"><span class="shade">800</span><span class="hex">#826400</span></div>
+        <div class="color-swatch lt" style="background:#554100;"><span class="shade">900</span><span class="hex">#554100</span></div>
+        <div class="color-swatch lt" style="background:#2B2100;"><span class="shade">950</span><span class="hex">#2B2100</span></div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-group-title">Neutral — Slate</div>
+      <div class="palette-group-desc">Structural grays for text, borders, and UI elements.</div>
+      <div class="color-row">
+        <div class="color-swatch dt" style="background:#F8F9FB;"><span class="shade">50</span><span class="hex">#F8F9FB</span></div>
+        <div class="color-swatch dt" style="background:#F1F3F7;"><span class="shade">100</span><span class="hex">#F1F3F7</span></div>
+        <div class="color-swatch dt" style="background:#E2E5ED;"><span class="shade">200</span><span class="hex">#E2E5ED</span></div>
+        <div class="color-swatch dt" style="background:#CDD2DE;"><span class="shade">300</span><span class="hex">#CDD2DE</span></div>
+        <div class="color-swatch lt" style="background:#9BA3B8;"><span class="shade">400</span><span class="hex">#9BA3B8</span></div>
+        <div class="color-swatch lt" style="background:#6B7492;"><span class="shade">500</span><span class="hex">#6B7492</span></div>
+        <div class="color-swatch lt" style="background:#515A74;"><span class="shade">600</span><span class="hex">#515A74</span></div>
+        <div class="color-swatch lt" style="background:#3C4459;"><span class="shade">700</span><span class="hex">#3C4459</span></div>
+        <div class="color-swatch lt" style="background:#282E3F;"><span class="shade">800</span><span class="hex">#282E3F</span></div>
+        <div class="color-swatch lt" style="background:#181C28;"><span class="shade">900</span><span class="hex">#181C28</span></div>
+        <div class="color-swatch lt" style="background:#0D0F16;"><span class="shade">950</span><span class="hex">#0D0F16</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03 — TYPOGRAPHY ═══ -->
+  <section class="section">
+    <div class="section-label">03 — Typography</div>
+    <h2 class="section-title">Type System</h2>
+    <p class="section-desc">Inter for clean, modern communication. JetBrains Mono for technical credibility. The weight contrast between <strong>taylor</strong> (800) and <span style="font-weight:300">smart</span> (300) carries through the entire system.</p>
+
+    <div class="type-scale">
+      <div class="type-sample">
+        <div class="type-meta">
+          <span class="type-tag">Display</span>
+          <span class="type-spec">Inter 800 / 56px / -2px tracking</span>
+        </div>
+        <div class="type-display" style="font-size: 56px; font-weight: 800; letter-spacing: -2px; line-height: 1.1;">
+          Built to be smart.<br>Engineered to last.
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">
+          <span class="type-tag">H1</span>
+          <span class="type-spec">Inter 800 / 48px / -1.5px tracking</span>
+        </div>
+        <div class="type-display" style="font-size: 48px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.15;">
+          Smart tech. Full service.
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">
+          <span class="type-tag">H2</span>
+          <span class="type-spec">Inter 700 / 36px / -1px tracking</span>
+        </div>
+        <div class="type-display" style="font-size: 36px; font-weight: 700; letter-spacing: -1px; line-height: 1.2;">
+          From conversation to launch.
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">
+          <span class="type-tag">H3</span>
+          <span class="type-spec">Inter 600 / 24px / -0.5px tracking</span>
+        </div>
+        <div class="type-display" style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.3;">
+          Ready to build something smart?
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">
+          <span class="type-tag">Body</span>
+          <span class="type-spec">Inter 400 / 16px / normal</span>
+        </div>
+        <div class="type-display" style="font-size: 16px; font-weight: 400; line-height: 1.6; color: var(--neutral-300); max-width: 640px;">
+          Full-service technology for Sugarcreek, Ohio and beyond. Full-stack web apps, websites, mobile apps, AI integration, networking, and hands-on training for local businesses.
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">
+          <span class="type-tag">Brand Name</span>
+          <span class="type-spec">Inter 800+300+700 / Weight contrast</span>
+        </div>
+        <div class="type-display" style="font-size: 40px; letter-spacing: -1.5px; line-height: 1;">
+          <span style="font-weight: 800;">taylor</span><span style="font-weight: 300; color: var(--neutral-300);">smart</span><span style="font-weight: 700; color: var(--accent-500);">.tech</span>
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">
+          <span class="type-tag">Code</span>
+          <span class="type-spec">JetBrains Mono 400 / 14px</span>
+        </div>
+        <div class="type-display" style="font-size: 14px; font-weight: 400; font-family: var(--font-mono); line-height: 1.6; color: var(--accent-500); background: var(--neutral-900); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--neutral-800); display: inline-block;">
+          taylorsmart.tech
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04 — UI COMPONENTS ═══ -->
+  <section class="section">
+    <div class="section-label">04 — UI Components</div>
+    <h2 class="section-title">Brand in Action</h2>
+    <p class="section-desc">How the brand system comes together in buttons, cards, and interactive elements.</p>
+
+    <h3 style="font-size: 18px; font-weight: 700; color: white; margin-bottom: 20px;">Buttons</h3>
+    <div class="button-row">
+      <button class="btn btn-primary">Get Started</button>
+      <button class="btn btn-secondary">Learn More</button>
+      <button class="btn btn-highlight">Book Workshop</button>
+      <button class="btn btn-dark">View Services</button>
+      <button class="btn btn-ghost">Contact Us</button>
+    </div>
+
+    <h3 style="font-size: 18px; font-weight: 700; color: white; margin-bottom: 20px; margin-top: 48px;">Service Cards</h3>
+    <div class="component-grid">
+      <div class="service-card">
+        <div class="service-card-icon cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h4>Web & App Development</h4>
+        <p>Custom full-stack web applications, responsive websites, and mobile apps built with modern frameworks.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M9 14h6"/><circle cx="12" cy="18" r="4"/></svg>
+        </div>
+        <h4>AI Integration</h4>
+        <p>Integrate artificial intelligence into your business workflows. Chatbots, automation, and custom AI solutions.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="12" width="6" height="8"/></svg>
+        </div>
+        <h4>Networking & IT</h4>
+        <p>WiFi system installation, network infrastructure, IT support, and technology solutions for your space.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h4>AI Workshops</h4>
+        <p>Hands-on workshops teaching your team to leverage AI tools effectively in day-to-day operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 — BRAND VOICE ═══ -->
+  <section class="section">
+    <div class="section-label">05 — Brand Voice</div>
+    <h2 class="section-title">Voice & Tone</h2>
+    <p class="section-desc">How taylorsmart.tech sounds in every interaction — confident, clear, and human.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="icon" style="color: var(--accent-500);">&#9889;</div>
+        <h4>Confident</h4>
+        <p>We know our craft. Direct statements, no hedging. "We build it" not "We can try to help."</p>
+      </div>
+      <div class="voice-card">
+        <div class="icon" style="color: var(--accent-500);">&#9878;</div>
+        <h4>Clear</h4>
+        <p>No jargon unless necessary. Your neighbor should understand it.</p>
+      </div>
+      <div class="voice-card">
+        <div class="icon" style="color: var(--highlight-500);">&#9733;</div>
+        <h4>Smart</h4>
+        <p>Show expertise through insight, not buzzwords. Demonstrate value with specifics.</p>
+      </div>
+      <div class="voice-card">
+        <div class="icon" style="color: var(--highlight-500);">&#9829;</div>
+        <h4>Local</h4>
+        <p>We're your neighbors. Approachable, respectful, genuinely invested in the community.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px;">
+      <h3 style="font-size: 18px; font-weight: 700; color: white; margin-bottom: 20px;">Messaging Examples</h3>
+      <div class="usage-grid">
+        <div class="usage-card do">
+          <h4>Do</h4>
+          <ul>
+            <li>"Smart solutions, Taylored for you."</li>
+            <li>"Smart tech. Full service."</li>
+            <li>"Ready to build something smart?"</li>
+            <li>"Free consultation. No jargon. Just a conversation about what technology can do for your business."</li>
+          </ul>
+        </div>
+        <div class="usage-card dont">
+          <h4>Don't</h4>
+          <ul>
+            <li>"We leverage synergistic paradigms to drive outcomes."</li>
+            <li>"Our innovative solutions may help your business."</li>
+            <li>"We're the best in the business!!!"</li>
+            <li>"Contact us to learn more about our services."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 06 — LOGO USAGE ═══ -->
+  <section class="section">
+    <div class="section-label">06 — Usage Guidelines</div>
+    <h2 class="section-title">Logo Rules</h2>
+    <p class="section-desc">Protect the integrity of the mark across all applications.</p>
+
+    <div class="usage-grid">
+      <div class="usage-card do">
+        <h4>Do</h4>
+        <ul>
+          <li>Use on dark navy or white backgrounds</li>
+          <li>Maintain clear space equal to icon height</li>
+          <li>Use provided SVG files for pixel-perfect rendering</li>
+          <li>Scale proportionally</li>
+          <li>Use monochrome version when color unavailable</li>
+        </ul>
+      </div>
+      <div class="usage-card dont">
+        <h4>Don't</h4>
+        <ul>
+          <li>Rotate, skew, or distort the logo</li>
+          <li>Add drop shadows, glows, or 3D effects</li>
+          <li>Place on busy or low-contrast backgrounds</li>
+          <li>Separate ".tech" from "taylorsmart" in the wordmark</li>
+          <li>Change the weight contrast in the name treatment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px;">
+      <h3 style="font-size: 18px; font-weight: 700; color: white; margin-bottom: 12px;">Minimum Sizes</h3>
+      <div style="display: flex; gap: 48px; align-items: flex-end; margin-top: 20px;">
+        <div style="text-align: center;">
+          <svg viewBox="0 0 512 512" width="16" height="16">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <text x="108" y="368" font-family="Inter, sans-serif" font-size="320" font-weight="800" fill="#FFFFFF" letter-spacing="-12">t</text>
+            <text x="280" y="368" font-family="Inter, sans-serif" font-size="320" font-weight="300" fill="#FFFFFF" letter-spacing="-12">s</text>
+          </svg>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--neutral-500); margin-top: 8px;">16px favicon</div>
+        </div>
+        <div style="text-align: center;">
+          <svg viewBox="0 0 512 512" width="32" height="32">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <text x="108" y="368" font-family="Inter, sans-serif" font-size="320" font-weight="800" fill="#FFFFFF" letter-spacing="-12">t</text>
+            <text x="280" y="368" font-family="Inter, sans-serif" font-size="320" font-weight="300" fill="#FFFFFF" letter-spacing="-12">s</text>
+          </svg>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--neutral-500); margin-top: 8px;">32px small</div>
+        </div>
+        <div style="text-align: center;">
+          <svg viewBox="0 0 512 512" width="64" height="64">
+            <rect x="16" y="16" width="480" height="480" rx="96" fill="#0B1121"/>
+            <text x="108" y="368" font-family="Inter, sans-serif" font-size="320" font-weight="800" fill="#FFFFFF" letter-spacing="-12">t</text>
+            <text x="280" y="368" font-family="Inter, sans-serif" font-size="320" font-weight="300" fill="#FFFFFF" letter-spacing="-12">s</text>
+          </svg>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--neutral-500); margin-top: 8px;">64px+ full detail</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="brand-footer">
+    <div class="domain">taylorsmart.tech</div>
+    <p>Taylor Smart LLC — Brand Identity System v2.0</p>
+    <p style="margin-top: 4px; font-size: 12px; color: var(--neutral-600);">Sugarcreek, Ohio</p>
+  </footer>
+
+</body>
+</html>
